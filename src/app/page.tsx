@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -7,5 +5,5 @@ export default function Home() {
       <div className="text-4xl">Hi, I'm Truong Thinh.</div>
     </main>
 
-  );
+  )
 }
