@@ -1,38 +1,26 @@
 "use client";
 
 import Link from "next/link";
-import {useEffect} from "react";
+// import {useEffect} from "react";
+import { motion } from "framer-motion"
 
 export default function Navigation() {
-    useEffect(() => {
-        let path = window.location.pathname;
-        console.log(path)
-
-        const toggleDropdown = () => {
-            const dropdownMenu = document.getElementById("language-dropdown-menu");
-            if (dropdownMenu) {
-                dropdownMenu.classList.toggle("hidden");
-            }
-        };
-
-        const button = document.getElementById("dropdown-button");
-        if (button) {
-            button.addEventListener("click", toggleDropdown);
+    const toggleDropdown = () => {
+        const dropdownMenu = document.getElementById("language-dropdown-menu");
+        if (dropdownMenu) {
+            dropdownMenu.classList.toggle("hidden");
         }
-
-        return () => {
-            if (button) {
-                button.removeEventListener("click", toggleDropdown);
-            }
-        };
-    }, []);
-
+    };
 
     return (
-        <header className="fixed inset-x-0 border-b border-transparent">
-            <div className="container flex items-center justify-between p-3 mx-auto">
+        <motion.header className="fixed inset-x-0 border-b border-transparent"
+            initial={{ clipPath: 'inset(0 100% 0 0)' }}
+            animate={{ clipPath: 'inset(0 0 0 0)' }}
+            transition={{ duration: 1.5, delay: 3 }}
+        >
+            <div className="flex items-center justify-between p-3 mx-auto">
                 <Link href={"/"}>
-                    <img id="logo" src="logo.svg"  alt="logo" className="h-20" />
+                    <motion.img id="logo" src="logo.svg" alt="logo" className="h-20" whileHover={{ scale: 1.2 }} />
                 </Link>
                 <div className="flex justify-between gap-6 text-xl">
                     <Link href={"/projects"} className=" hover:text-[#50577A]">
@@ -47,7 +35,7 @@ export default function Navigation() {
                 </div>
 
                 <div>
-                    <button id="dropdown-button" type="button" data-dropdown-toggle="language-dropdown-menu" className="inline-flex items-center justify-center px-4 py-2 dark:text-white rounded-lg cursor-default hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">
+                    <button id="dropdown-button" type="button" data-dropdown-toggle="language-dropdown-menu" className="inline-flex items-center justify-center px-4 py-2 dark:text-white rounded-lg cursor-default hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white" onClick={toggleDropdown}>
                         <img src="en.svg" className="h-3.5 w-3.5 rounded-full me-2" />
                         English (US)
                     </button>
@@ -72,11 +60,10 @@ export default function Navigation() {
                             </li>
                         </ul>
                     </div>
-
                 </div>
 
             </div>
 
-        </header>
+        </motion.header>
     );
 }

@@ -20,10 +20,8 @@ body {
 }
 
 main {
-  height: 50vh;
   position: inherit;
   top: 6.5rem; 
-  
 }
 
 header {
