@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "./components/nav"
+import { Providers } from "./providers";
 import Preloader from './components/preloader';
 
 
@@ -20,12 +20,13 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
-      <Preloader />
-      <Navigation />
-      <div id="main" className="container hidden">
-        {children}
-      </div>
+      <body className={`${inter.className} min-h-screen`}>
+        <Providers>
+          <Preloader />
+          <div id="content" className="container hidden">
+            {children}
+          </div>
+        </Providers>
       </body>
     </html>
   );
