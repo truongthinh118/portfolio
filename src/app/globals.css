@@ -21,7 +21,7 @@ body {
 
 main {
   position: inherit;
-  top: 6.5rem; 
+  
 }
 
 header {
@@ -31,4 +31,3 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-

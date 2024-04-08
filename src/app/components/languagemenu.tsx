@@ -3,14 +3,19 @@ import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button } from "@nextui-org/react";
 
-export default function LanguageMenu() {
+
+interface LanguageMenuProps {
+    lang?:string;
+}
+
+export default function LanguageMenu(props: LanguageMenuProps) {
 
     const itemClasses = "flex items-center gap-2";
     const iconClasses = "h-3.5 w-3.5 rounded-full";
 
     const lang: { [key: string]: JSX.Element } = {
         "en": <img src="en.svg" className={iconClasses} />,
-        "cn": <img src="cn.svg" className={iconClasses} />
+        "zh": <img src="zh.svg" className={iconClasses} />
     }
 
     const [selectedKeys, setSelectedKeys] = useState(new Set(["en"]));
@@ -52,8 +57,8 @@ export default function LanguageMenu() {
                     <DropdownItem key="en" aria-label="en-language-lable">
                         <Link href={"/"} className={itemClasses}> {lang.en} English (US)</Link>
                     </DropdownItem>
-                    <DropdownItem key="cn" aria-label="cn-language-lable">
-                        <Link href={"/contact"} className={itemClasses}> {lang.cn} 中文 (繁體)</Link>
+                    <DropdownItem key="zh" aria-label="cn-language-lable">
+                        <Link href={"/contact"} className={itemClasses}> {lang.zh} 中文 (简体)</Link>
                     </DropdownItem>
                 </DropdownMenu>
             </Dropdown>

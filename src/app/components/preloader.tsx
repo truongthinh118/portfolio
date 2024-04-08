@@ -5,10 +5,14 @@ import { motion } from 'framer-motion';
 import LanguageMenu from "./languagemenu";
 
 
+interface PreloaderProps {
+    lang: string;
+}
+  
+
 export default function Preloader() {
 
     const toggleContent = () => {
-        console.log('complete')
         const nav = document.getElementById("nav");
         if (nav) {
             nav.classList.remove("hidden");
@@ -34,7 +38,7 @@ export default function Preloader() {
                     animate={{ scale: 1 }}
                     transition={{ duration: 1.5, delay: 1.5 }}>
                     <motion.img
-                        src='logo.svg'
+                        src='logo2.svg'
                         className='h-20'
                         initial={{ clipPath: 'inset(50% 0 50% 0)' }}
                         animate={{ clipPath: 'inset(0 0 0 0)' }}
@@ -50,7 +54,7 @@ export default function Preloader() {
             >
 
                 <div className="flex justify-between gap-6 text-xl center">
-                    <Link href={"/information"} className=" hover:text-[#50577A]">
+                    <Link href={"/about"} className=" hover:text-[#50577A]">
                         Information
                     </Link>
                     <Link href={"/projects"} className=" hover:text-[#50577A]">
@@ -60,7 +64,7 @@ export default function Preloader() {
                         Contact
                     </Link>
 
-                    <LanguageMenu />
+                    <LanguageMenu lang = "en"/>
 
                 </div>
             </motion.div>
