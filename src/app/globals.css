@@ -14,20 +14,27 @@ body {
 }
 
 .center {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 main {
   position: inherit;
-  
+
 }
 
 header {
   background: #E7E6E1;
   z-index: 1;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.icon-light {
+  color: #5E6697;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  padding: 0.5rem
 }
