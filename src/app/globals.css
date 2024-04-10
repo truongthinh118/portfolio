@@ -26,7 +26,7 @@ main {
 
 header {
   background: #E7E6E1;
-  z-index: 1;
+  z-index: 9000;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -16,7 +16,7 @@ export default function Home() {
         <br/>
         <br/>
 
-        <div className="flex h-14 w-14 items-center bg-rose-100 rounded-full text-nowrap hover:scale-125">
+        <div style={{transition: "all 0.2s ease-in-out"}} className="flex h-14 w-14 items-center bg-rose-100 rounded-full text-nowrap hover:scale-125">
           <Link href="/about" showAnchorIcon anchorIcon={<img src="chevron-right.svg" width={'20px'}/>} className="relative left-2/4 text-[#5E6697]">
             About me</Link>
         </div>
