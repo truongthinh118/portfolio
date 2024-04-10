@@ -104,7 +104,7 @@ export default function MailForm() {
                 <ModalContent>
                     {(onClose) => (
                         <>
-                            <ModalBody className={`flex-row gap-4 px-3 ${isSuccess ? "bg-green-300":"bg-red-300"}`}>
+                            <ModalBody className={`flex-row gap-4 px-3 ${isSuccess ? "bg-emerald-400":"bg-rose-400"}`}>
                                 {isSuccess ?
                                     (<>
                                         <i className="bi bi-check-circle" />
