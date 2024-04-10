@@ -31,5 +31,6 @@ export async function sendEmail(formData: FormData): Promise<response> {
             },
         );
     }
+    console.log(result)
     return result;
 }
