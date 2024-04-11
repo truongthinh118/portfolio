@@ -22,7 +22,7 @@ export default function Preloader() {
 
     async function myAnimation() {
         animate("#nav", { display: "none", clipPath: 'inset(0 100% 0 0)' });
-        await animate(scope.current, { scale: 8, position: "absolute", placeSelf: "center", background: "transparent" });
+        await animate(scope.current, { scale: 8, position: "absolute", placeSelf: "center" });
         await animate(scope.current, { scale: 1, left: 0, top: 0, position: "fixed" }, { duration: 1.5, delay: 1.5 });
         await animate(scope.current, { width: '100%', background:"#FFFFFF" });
         animate("#nav", { display: "unset", clipPath: 'inset(0 0 0 0)' }, {
