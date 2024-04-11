@@ -133,6 +133,5 @@ export default function MailForm() {
                 </ModalContent>
             </Modal>
         </>
-
     );
 }

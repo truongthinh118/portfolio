@@ -1,75 +1,64 @@
 'use client';
 
 import Link from "next/link";
-import { motion } from 'framer-motion';
-import LanguageMenu from "./languagemenu";
-
+import { useEffect } from "react";
+import { motion, useAnimate, AnimatePresence } from 'framer-motion';
+import Navigator from "./nav";
 
 interface PreloaderProps {
     lang: string;
 }
-  
+
 
 export default function Preloader() {
+    const [scope, animate] = useAnimate();
 
     const toggleContent = () => {
-        const nav = document.getElementById("nav");
-        if (nav) {
-            nav.classList.remove("hidden");
-        }
         const content = document.getElementById("content");
         if (content) {
             content.classList.remove("hidden");
         }
     };
 
+    async function myAnimation() {
+        animate("#nav", { display: "none", clipPath: 'inset(0 100% 0 0)' });
+        await animate(scope.current, { scale: 8, position: "absolute", placeSelf: "center", background: "transparent" });
+        await animate(scope.current, { scale: 1, left: 0, top: 0, position: "fixed" }, { duration: 1.5, delay: 1.5 });
+        await animate(scope.current, { width: '100%', background:"#FFFFFF" });
+        animate("#nav", { display: "unset", clipPath: 'inset(0 0 0 0)' }, {
+        });
+
+        // animate("#content", { display: "unset" });
+        const contentElement = document.getElementById("content");
+        if (contentElement) {
+            contentElement.style.display = "unset";
+        }
+    }
+
+    useEffect(() => {
+        myAnimation();
+        
+    }, []);
 
     return (
-        <motion.header
-            className='p-3 w-full'
-            initial={{ position: 'absolute', top: '47%', left: '47%' }}
-            animate={{ top: 0, left: 0, position: "fixed" }}
-            transition={{ duration: 1.5, delay: 1.5 }}
-            onAnimationComplete={toggleContent}
-        >
-            <Link href={"/"}>
-                <motion.div
-                    initial={{ scale: 5 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 1.5, delay: 1.5 }}>
+        <AnimatePresence>
+            <motion.header ref={scope} className='p-3' key='header' exit={{}}>
+                <Link href={"/"}>
                     <motion.img
                         src='logo2.svg'
-                        className='h-20'
+                        className='h-16'
                         initial={{ clipPath: 'inset(50% 0 50% 0)' }}
                         animate={{ clipPath: 'inset(0 0 0 0)' }}
                         transition={{ duration: 1.5, transitionEnd: { clipPath: "none" } }}
                         whileHover={{ scale: 1.2 }}
                     />
+                </Link>
+                <motion.div id="nav" className="hidden">
+                    <Navigator />
                 </motion.div>
-            </Link>
-            <motion.div id='nav' className="hidden"
-                initial={{ clipPath: 'inset(0 100% 0 0)' }}
-                animate={{ clipPath: 'inset(0 0 0 0)', transitionEnd: { clipPath: "none" } }}
-                transition={{ duration: 1.5, delay: 3 }}
-            >
+            </motion.header>
+        </AnimatePresence>
 
-                <div className="flex justify-between gap-6 text-xl center">
-                    <Link href={"/about"} className=" hover:text-[#50577A]">
-                        Information
-                    </Link>
-                    <Link href={"/projects"} className=" hover:text-[#50577A]">
-                        Projects
-                    </Link>
-                    <Link href={"/contact"} className=" hover:text-[#50577A]">
-                        Contact
-                    </Link>
-
-                    <LanguageMenu lang = "en"/>
-
-                </div>
-            </motion.div>
-
-        </motion.header>
     );
 };
 
