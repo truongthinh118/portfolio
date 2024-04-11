@@ -2,14 +2,20 @@
 import { useState, useMemo } from 'react';
 import { Input, Textarea } from '@nextui-org/react';
 import { Modal, ModalContent, ModalBody, useDisclosure } from '@nextui-org/react';
-import { sendEmail } from '../action/actions';
+import emailjs from '@emailjs/browser';
 
 export default function MailForm() {
     const [name, setName] = useState("");
-
     const [address, setAddress] = useState("");
+    const [message, setMessage] = useState("");
+
+    const { isOpen, onOpen, onOpenChange } = useDisclosure();
+    const [isSuccess, setSuccess] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
+
 
     const labelClass = { label: "after:content-none" };
+    const modalButtonClass = isSuccess ? "hover:bg-green-400 active:bg-green-500" : "hover:bg-red-400 active:bg-red-500";
 
     const validateEmail = (address: string) => address.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
 
@@ -19,60 +25,65 @@ export default function MailForm() {
         return validateEmail(address) ? false : true;
     }, [address]);
 
-    const [isSuccess, setSuccess] = useState<boolean>(false);
-
-    const { isOpen, onOpen, onOpenChange } = useDisclosure();
-
-    const send = async (e: FormData) => {
-        const status = sendEmail(e);
-        setSuccess((await status).status)
-        onOpen()
+    const send = () => {
+        if (name && address && message && validateEmail(address)) {
+            emailjs.send('service_uqp42mn', 'template_cam0i4u', { name, email: address, message }, {
+                publicKey: '2gh4dkYQw-bT5Z6s9',
+                limitRate: { throttle: 30000 }
+            }).then(
+                () => {
+                    setSuccess(true)
+                },
+                (error) => {
+                    setSuccess(false)
+                    setErrorMessage(error.text)
+                },
+            ).finally(() => onOpen());
+        }
     }
 
     return (
         <>
             <div className='p-8 mx-auto w-2/4 bg-gradient-to-r from-blue-300 rounded-xl'>
                 <form
-                    action={send}
+                    onSubmit={(e) => { e.preventDefault(); send(); }}
                     className="max-w-sm flex flex-col flex-wrap gap-4 text-[#5E6697]">
                     <Input type="name"
                         classNames={labelClass}
-                        isRequired
                         label="Your Name"
                         placeholder='Input Your Name'
                         labelPlacement='outside'
-                        isClearable
                         startContent={
                             <i className="icon-form bi bi-person-circle" />
                         }
                         value={name}
                         onValueChange={setName}
-                        name='name'
                         autoComplete='given-name'
-
+                        isRequired
+                        isClearable
                     />
                     <Input type="email"
                         classNames={labelClass}
-                        isRequired
                         label="Email"
                         placeholder='Input Your Email'
                         labelPlacement='outside'
-                        isClearable
                         startContent={
                             <i className="icon-form bi bi-envelope" />
                         }
-                        name='email'
                         autoComplete='email'
                         value={address}
                         onValueChange={setAddress}
                         errorMessage={isInvalid && "Please enter a valid email"}
+                        isRequired
+                        isClearable
                     />
                     <Textarea
                         classNames={labelClass}
-                        name='message'
                         label="Your Message"
                         labelPlacement="outside"
                         placeholder="Enter your message"
+                        value={message}
+                        onValueChange={setMessage}
                         isRequired
                     />
                     <button type='submit'
@@ -97,14 +108,14 @@ export default function MailForm() {
                 placement='bottom'
                 classNames={{
                     wrapper: "w-1/5	justify-start",
-                    closeButton: isSuccess?"hover:bg-green-400 active:bg-green-500":"hover:bg-red-400 active:bg-red-500"
+                    closeButton: modalButtonClass
                 }}
                 disableAnimation
             >
                 <ModalContent>
                     {(onClose) => (
                         <>
-                            <ModalBody className={`flex-row gap-4 px-3 ${isSuccess ? "bg-emerald-400":"bg-rose-400"}`}>
+                            <ModalBody className={`flex-row gap-4 px-3 ${isSuccess ? "bg-emerald-400" : "bg-rose-400"}`}>
                                 {isSuccess ?
                                     (<>
                                         <i className="bi bi-check-circle" />
@@ -113,7 +124,7 @@ export default function MailForm() {
                                     :
                                     (<>
                                         <i className="bi bi-x-circle" />
-                                        Message sent failed.
+                                        {errorMessage}
                                     </>)
                                 }
                             </ModalBody>

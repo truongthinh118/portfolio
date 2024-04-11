@@ -14,7 +14,6 @@ export default function Home() {
     <main className='grid min-h-screen items-center'>
       <div>
         <div className='text-8xl leading-tight'>Let's connect</div>
-
         <div className='flex columns-2'>
           <div className='w-full'>
             <div>
