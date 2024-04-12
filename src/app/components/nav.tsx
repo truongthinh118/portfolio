@@ -43,7 +43,7 @@ export default function Navigator() {
                 </NavbarItem>
             </NavbarContent>
 
-            <NavbarMenu>
+            <NavbarMenu style={{marginTop: '1.5rem'}}>
                 {menuItems.map((item, index) => (
                     <NavbarMenuItem key={item.key} onClick={()=>setIsMenuOpen(false)}>
                         <Link
