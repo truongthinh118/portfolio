@@ -14,17 +14,12 @@ export default function Home() {
         <br />
         <br />
 
-        <div style={{ transition: "all 0.2s ease-in-out" }} className="flex h-14 w-14 items-center bg-[#B97361] rounded-full text-nowrap hover:scale-125">
+        <div style={{ transition: "all 0.2s ease-in-out" }} className="flex h-14 w-14 items-center bg-warning/20 rounded-full text-nowrap hover:scale-125">
           <Link href="/about" showAnchorIcon anchorIcon={<img src="chevron-right.svg" width={'20px'} />} className="relative left-2/4 text-[#76726F]">
             About me</Link>
         </div>
       </div>
-      <img src='logo2.svg'
-        className='h-[32rem] transition-all ease-in-out hover:scale-125' />
-      
-
-
-
+      <img src='logo2.svg' className='hidden md:flex h-[32rem] transition-all ease-in-out hover:scale-125' />
     </main>
   )
 }

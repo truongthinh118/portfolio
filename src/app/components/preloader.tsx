@@ -13,13 +13,6 @@ interface PreloaderProps {
 export default function Preloader() {
     const [scope, animate] = useAnimate();
 
-    const toggleContent = () => {
-        const content = document.getElementById("content");
-        if (content) {
-            content.classList.remove("hidden");
-        }
-    };
-
     async function myAnimation() {
         animate("#nav", { display: "none", clipPath: 'inset(0 100% 0 0)' });
         await animate(scope.current, { scale: 8, position: "absolute", placeSelf: "center" });
@@ -28,7 +21,6 @@ export default function Preloader() {
         animate("#nav", { display: "unset", clipPath: 'inset(0 0 0 0)' }, {
         });
 
-        // animate("#content", { display: "unset" });
         const contentElement = document.getElementById("content");
         if (contentElement) {
             contentElement.style.display = "unset";
