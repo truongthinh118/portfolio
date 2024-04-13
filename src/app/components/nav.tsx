@@ -31,7 +31,7 @@ export default function Navigator() {
                 wrapper:'max-w-full'
             }}
         >
-            <NavbarBrand>
+            <NavbarBrand onClick={() => setLocation("")}>
                 <Link href={"/"}>
                     <img src='logo.svg'
                         className='h-12 transition-all ease-in-out hover:scale-125'/>
