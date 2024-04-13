@@ -1,54 +1,40 @@
 'use client';
-
-import Link from "next/link";
-import { useEffect } from "react";
-import { motion, useAnimate, AnimatePresence } from 'framer-motion';
-import Navigator from "./nav";
-
-interface PreloaderProps {
-    lang: string;
-}
-
+import { useState } from "react";
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Preloader() {
-    const [scope, animate] = useAnimate();
+    const [isVisible, setIsVisible] = useState(true);
 
-    async function myAnimation() {
-        animate("#nav", { display: "none", clipPath: 'inset(0 100% 0 0)' });
-        await animate(scope.current, { scale: 8, position: "absolute", placeSelf: "center" });
-        await animate(scope.current, { scale: 1, left: 0, top: 0, position: "fixed" }, { duration: 1.5, delay: 1.5 });
-        await animate(scope.current, { width: '100%', background:"#FFFFFF" });
-        animate("#nav", { display: "unset", clipPath: 'inset(0 0 0 0)' }, {
-        });
-
+    function showContent() {
+        setIsVisible(false);
         const contentElement = document.getElementById("content");
         if (contentElement) {
-            contentElement.style.display = "unset";
+            contentElement.classList.remove("hidden");
         }
     }
 
-    useEffect(() => {
-        myAnimation();
-        
-    }, []);
-
     return (
         <AnimatePresence>
-            <motion.header ref={scope} className='p-3' key='header' exit={{}}>
-                <Link href={"/"}>
+            {isVisible && (
+                <motion.div
+                    className="preloader"
+                    key="preloader"
+                    initial={{ opacity: 1 }}
+                    animate={{ opacity: 0, transitionEnd: { display: "none" } }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 1, delay: 1.5 }}
+                    onAnimationComplete={() => showContent()}
+                >
                     <motion.img
-                        src='logo2.svg'
-                        className='h-16'
+                        src='logo.svg'
+                        className='h-3/4'
                         initial={{ clipPath: 'inset(50% 0 50% 0)' }}
-                        animate={{ clipPath: 'inset(0 0 0 0)' }}
-                        transition={{ duration: 1.5, transitionEnd: { clipPath: "none" } }}
-                        whileHover={{ scale: 1.2 }}
+                        animate={{ clipPath: 'inset(0)' }}
+                        transition={{ duration: 1.5 }}
+                        exit={{ clipPath: 'none' }}
                     />
-                </Link>
-                <motion.div id="nav" className="hidden">
-                    <Navigator />
                 </motion.div>
-            </motion.header>
+            )}
         </AnimatePresence>
 
     );

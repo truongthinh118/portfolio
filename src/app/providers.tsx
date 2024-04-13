@@ -7,7 +7,7 @@ export function Providers({children}: { children: React.ReactNode }) {
     const router = useRouter()
     
     return (
-      <NextUIProvider navigate={router.push} className='grid'>
+      <NextUIProvider navigate={router.push}>
         {children}
       </NextUIProvider>
     )

@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import Preloader from './components/preloader';
+import Navigator from "./components/nav";
 import { Analytics } from '@vercel/analytics/react';
 
 
@@ -22,12 +23,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
       </head>
-      <body className={`${inter.className} min-h-screen grid`}>
+      <body className={`${inter.className} min-h-screen`}>
+        <Preloader />
         <Providers>
-          <Preloader />
-          <div id="content" className="container hidden">
+          <div id="content" className="hidden relative flex flex-col">
+            <Navigator />
             {children}
           </div>
         </Providers>

@@ -3,6 +3,7 @@ import { useState, useMemo } from 'react';
 import { Input, Textarea } from '@nextui-org/react';
 import { Modal, ModalContent, ModalBody, useDisclosure } from '@nextui-org/react';
 import emailjs from '@emailjs/browser';
+import ContactMethod from './contactmethod';
 
 export default function MailForm() {
     const [name, setName] = useState("");
@@ -44,10 +45,10 @@ export default function MailForm() {
 
     return (
         <>
-            <div className='p-8 mx-auto w-2/4 bg-gradient-to-r from-blue-300 rounded-xl'>
+            <div className='flex justify-center mx-auto w-max md:w-7/12'>
                 <form
                     onSubmit={(e) => { e.preventDefault(); send(); }}
-                    className="max-w-sm flex flex-col flex-wrap gap-4 text-[#5E6697]">
+                    className="w-full flex flex-col gap-4 text-[#5E6697] bg-gradient-to-r from-blue-300 p-8 rounded-xl ">
                     <Input type="name"
                         classNames={labelClass}
                         label="Your Name"
@@ -86,15 +87,21 @@ export default function MailForm() {
                         onValueChange={setMessage}
                         isRequired
                     />
-                    <button type='submit'
-                        className="text-white bg-blue-700
+                    <div className='flex flex-row justify-between gap-2'>
+                        <div className='sm:hidden'>
+                            <ContactMethod />
+                        </div>
+                        <button type='submit'
+                            className="text-white bg-blue-700
                                 hover:bg-blue-800 
                                 focus:ring-4 focus:outline-none focus:ring-blue-300 
                                 font-medium rounded-lg text-sm 
-                                w-full sm:w-auto px-5 py-2.5 
+                                w-full px-5 py-2.5 
                                 text-center 
                                 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                    >Send</button>
+                        >Send</button>
+                    </div>
+
                 </form>
             </div>
 

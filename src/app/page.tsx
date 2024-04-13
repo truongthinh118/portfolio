@@ -2,7 +2,7 @@ import { Link } from "@nextui-org/react"
 
 export default function Home() {
   return (
-    <main id="introduction" className="flex flex-row min-h-screen items-center justify-around">
+    <main className="flex flex-row items-center justify-around" style={{height:'calc(100vh - 4rem)'}}>
 
       <div className="text-2xl">
         <p className="font-extralight">Hello, I'm</p>
@@ -19,7 +19,7 @@ export default function Home() {
             About me</Link>
         </div>
       </div>
-      <img src='logo2.svg' className='hidden md:flex h-[32rem] transition-all ease-in-out hover:scale-125' />
+      <img src='logo.svg' className='hidden md:flex h-[32rem] transition-all ease-in-out hover:scale-125' />
     </main>
   )
 }
