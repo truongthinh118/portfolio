@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function Home() {
 
   return (
-    <main className='grid min-h-screen items-center'>
+    <main className='items-center'>
       <div>
         <div className='text-8xl leading-tight'>Let's connect</div>
         <div className='flex flex-col xl:flex-row'>

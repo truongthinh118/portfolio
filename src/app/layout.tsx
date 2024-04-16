@@ -28,7 +28,7 @@ export default function RootLayout({
       <body className={`${inter.className} min-h-screen`}>
         <Preloader />
         <Providers>
-          <div id="content" className="hidden relative flex flex-col">
+          <div id="app-container" className="hidden relative flex flex-col">
             <Navigator />
             {children}
           </div>

@@ -2,7 +2,7 @@ import { Link } from "@nextui-org/react"
 
 export default function Home() {
   return (
-    <main className="flex flex-row items-center justify-around" style={{height:'calc(100vh - 4rem)'}}>
+    <main className="flex flex-row items-center justify-around">
 
       <div className="text-2xl">
         <p className="font-extralight">Hello, I'm</p>

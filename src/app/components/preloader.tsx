@@ -7,7 +7,7 @@ export default function Preloader() {
 
     function showContent() {
         setIsVisible(false);
-        const contentElement = document.getElementById("content");
+        const contentElement = document.getElementById("app-container");
         if (contentElement) {
             contentElement.classList.remove("hidden");
         }
