@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Home() {
 
   return (
-    <div className="px-6 flex gap-4 flex-col pb-16 flex-grow">
+    <div className="px-6 flex gap-4 flex-col flex-grow">
       <h1 className="mt-4 font-bold text-4xl">Lorem ipsum dolor sit amet</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Purus gravida quis blandit turpis. Augue neque gravida in fermentum et sollicitudin ac orci. Et sollicitudin ac orci phasellus egestas. Elementum tempus egestas sed sed risus pretium quam vulputate. Interdum velit euismod in pellentesque massa placerat duis ultricies.</p>
       

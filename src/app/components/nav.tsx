@@ -1,5 +1,5 @@
 'use client';
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link"
 import { Navbar, NavbarBrand, NavbarMenuToggle, NavbarMenuItem, NavbarMenu, NavbarContent, NavbarItem } from "@nextui-org/react";
 import LanguageMenu from "./languagemenu"
@@ -7,7 +7,7 @@ import LanguageMenu from "./languagemenu"
 
 export default function Navigator() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-    const [location, setLocation] = React.useState<React.Key>("");
+    const [location, setLocation] = React.useState("");
 
 
     type menuItem = {
@@ -22,19 +22,25 @@ export default function Navigator() {
         { name: "Contact", href: "/contact", key: "contact" },
     ];
 
+    useEffect(() => {
+        var location = window.location.pathname;
+        setLocation(location);
+    }, [])
+
+
 
     return (
         <Navbar
             isMenuOpen={isMenuOpen}
             onMenuOpenChange={setIsMenuOpen}
             classNames={{
-                wrapper:'max-w-full'
+                wrapper: 'max-w-full'
             }}
         >
             <NavbarBrand onClick={() => setLocation("")}>
                 <Link href={"/"}>
                     <img src='logo.svg'
-                        className='h-12 transition-all ease-in-out hover:scale-125'/>
+                        className='h-12 transition-all ease-in-out hover:scale-125' />
                 </Link>
             </NavbarBrand>
 
@@ -44,7 +50,7 @@ export default function Navigator() {
 
             <NavbarContent className="hidden sm:flex gap-4" justify="end">
                 {menuItems.map((item) => (
-                    <NavbarItem key={item.key} isActive={item.key == location} onClick={() => setLocation(item.key)}>
+                    <NavbarItem key={item.key} isActive={item.href == location} onClick={() => setLocation(item.href)}>
                         <Link href={item.href}>{item.name}</Link>
                     </NavbarItem>
                 ))}
@@ -53,9 +59,7 @@ export default function Navigator() {
                 </NavbarItem>
             </NavbarContent>
 
-            <NavbarMenu
-            // style={{marginTop: '1.5rem'}}
-            >
+            <NavbarMenu>
                 {menuItems.map((item) => (
                     <NavbarMenuItem key={item.key} onClick={() => setIsMenuOpen(false)}>
                         <Link

@@ -29,10 +29,10 @@ export default function LanguageMenu(props: LanguageMenuProps) {
     );
 
 
-    useEffect(()=>{
-        var url = window.location.href;
-        console.log(url);
-    }, [selectedKeys])
+    // useEffect(()=>{
+    //     var url = window.location.href;
+    //     console.log(url);
+    // }, [selectedKeys])
     
 
     return (
