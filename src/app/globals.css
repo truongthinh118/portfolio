@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-  color: #5E6697;
-  background: #E7E6E1;
-} */
-
 .preloader {
   position: fixed;
   width: 100%;
@@ -34,9 +29,16 @@ header {
   display: flex;
   align-items: center;
 }
-
+/* 
 main {
   min-height: calc(100vh - 4rem)
+} */
+
+.profile-card {
+  background-color: #ECE8E5;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .icon-light {
@@ -50,6 +52,8 @@ main {
   color: #5E6697;
   padding: 0.5rem
 }
+
+
 
 .glass-font {
   color: #76726F;
@@ -77,4 +81,21 @@ main {
 
 .flipped {
   transform: rotateY(180deg) scale(1.5);
+}
+
+.objectives {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 5rem;
+  color: #92755F;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.objectives span {
+  font-weight: 700;
+}
+
+.objectives span p {
+  font-weight: 300;
 }

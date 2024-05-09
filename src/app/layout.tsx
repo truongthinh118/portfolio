@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers";
 import Preloader from './components/preloader';
@@ -8,6 +9,10 @@ import { Analytics } from '@vercel/analytics/react';
 
 
 const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400"]
+});
 
 export const metadata: Metadata = {
   title: "Truong Thinh Portfolio",
@@ -28,7 +33,7 @@ export default function RootLayout({
       <body className={`${inter.className} min-h-screen`}>
         <Preloader />
         <Providers>
-          <div id="app-container" className="hidden relative flex flex-col">
+          <div id="app-container" className="hidden relative flex-col">
             <Navigator />
             {children}
           </div>

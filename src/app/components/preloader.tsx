@@ -10,6 +10,7 @@ export default function Preloader() {
         const contentElement = document.getElementById("app-container");
         if (contentElement) {
             contentElement.classList.remove("hidden");
+            contentElement.classList.add("flex");
         }
     }
 
