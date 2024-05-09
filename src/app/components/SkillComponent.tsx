@@ -24,9 +24,8 @@ export default function SkillsComponent() {
             showDivider={false}
             itemClasses={{
                 base: 'border-b border-[#11111126]',
-                // trigger: 'py-1',
-                title: 'text-2xl text-current data-[open=true]:font-bold',
-                content: 'font-normal text-xl flex flex-col gap-1',
+                title: 'data-[open=true]:font-bold text-2xl text-current',
+                content: 'flex flex-col gap-1 font-normal text-2xl',
             }}
             motionProps={{
                 variants: {
@@ -73,7 +72,7 @@ export default function SkillsComponent() {
                     </div>
                 ))}
             </AccordionItem>
-            <AccordionItem key="languages" title="Foreign Language">
+            <AccordionItem key="languages" title="Foreign Languages">
                 {languages.map((item) => (
                     <div key={item.name} className="flex gap-2 items-center">
                         {item.icon}

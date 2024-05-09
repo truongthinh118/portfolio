@@ -15,9 +15,8 @@ export default function ProfileComponent() {
             </div>
 
             <Divider />
-            <div className="w-full text-2xl">
-                <SkillsComponent />
-            </div>
+
+            <SkillsComponent />
         </div>
     )
 }
