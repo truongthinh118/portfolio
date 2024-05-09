@@ -13,22 +13,22 @@ export default function Home() {
         <span className="absolute z-0 h-full w-full opacity-30 bg-cover bg-no-repeat bg-[center_bottom_20%] bg-[url('/background-2.jpeg')]" />
         
         <div className="relative h-full flex flex-col z-10">
-          <div className="flex flex-col h-full p-8 text-8xl font-semibold text-[#5F5B59] justify-center">
+          <div className="flex flex-col h-full p-8 lg:text-5xl xl:text-8xl font-semibold text-[#5F5B59] justify-center">
             <p>WELCOME TO</p>
             <p>MY WEBSITE!</p>
           </div>
           <div className="flex h-16	w-full bg-[#ECE8E5] divide-x divide-[#BDBBBB]">
             <div className="flex w-full items-end justify-center py-2">
-              <span className="text-5xl font-bold">
+              <span className="text-3xl xl:text-5xl font-bold">
                 2+{" "}
               </span>
-              <span className="text-2xl font-light">years experience</span>
+              <span className="text-lg font-light">years experience</span>
             </div>
             <div className="flex w-full items-end justify-center py-2">
-              <span className="text-5xl font-bold">
+              <span className="text-3xl xl:text-5xl font-bold">
                 10+{" "}
               </span>
-              <span className="text-2xl font-light">completed projects</span>
+              <span className="text-lg font-light">completed projects</span>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@ export default function Home() {
               Objectives
             </span>
 
-            <div className="objectives gap-6">
+            <div className="objectives">
               <span>
                 Short term:
                 <p>
@@ -72,7 +72,7 @@ export default function Home() {
               Education
             </span>
 
-            <div className="objectives gap-6">
+            <div className="objectives">
               <p>University of Economics and Law - Vietnam National University HCMC</p>
               <p>Bachelor - Applied Mathematics in Economics, Management and Finance</p>
             </div>

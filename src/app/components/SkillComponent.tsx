@@ -24,8 +24,8 @@ export default function SkillsComponent() {
             showDivider={false}
             itemClasses={{
                 base: 'border-b border-[#11111126]',
-                title: 'data-[open=true]:font-bold text-2xl text-current',
-                content: 'flex flex-col gap-1 font-normal text-2xl',
+                title: 'data-[open=true]:font-bold 2xl:text-2xl text-current',
+                content: 'flex flex-col gap-1 font-normal 2xl:text-2xl',
             }}
             motionProps={{
                 variants: {
