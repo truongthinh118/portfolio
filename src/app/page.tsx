@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="relative hidden lg:grid grid-cols-8 xl:grid-cols-7 grid-rows-5 gap-2.5 p-2.5 bg-neutral-100" style={{ minHeight: 'calc(100vh - 4rem)' }}>
-      <div className="col-span-3 xl:col-span-2 row-span-5">
+    <main className="relative hidden lg:grid grid-cols-7 grid-rows-5 gap-2.5 p-2.5 bg-neutral-100" style={{ minHeight: 'calc(100vh - 4rem)' }}>
+      <div className="col-span-2 row-span-5">
         <ProfileComponent />
       </div>
 
@@ -13,7 +13,7 @@ export default function Home() {
         <span className="absolute z-0 h-full w-full opacity-30 bg-cover bg-no-repeat bg-[center_bottom_20%] bg-[url('/background-2.jpeg')]" />
         
         <div className="relative h-full flex flex-col z-10">
-          <div className="flex flex-col h-full p-8 lg:text-5xl xl:text-8xl font-semibold text-[#5F5B59] justify-center">
+          <div className="flex flex-col h-full px-8 lg:text-6xl 2xl:text-8xl font-semibold text-[#5F5B59] justify-center">
             <p>WELCOME TO</p>
             <p>MY WEBSITE!</p>
           </div>
