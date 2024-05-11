@@ -11,6 +11,7 @@ export default function ExperienceComponent() {
     <div className="flex h-full flex-col items-center justify-evenly lg:flex-row">
       {experienceData.map((item) => (
         <Card
+          key={item.company}
           className="h-[45%] w-4/5 justify-center bg-[#ECE8E5] md:w-3/5 lg:h-4/5 lg:w-[45%] xl:h-full 2xl:w-2/5"
           radius="none"
           isPressable
