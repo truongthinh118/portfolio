@@ -1,10 +1,11 @@
 "use client";
 import { useState, useMemo } from "react";
 import { Input, Textarea } from "@nextui-org/react";
-import ContactMethod from "./contactmethod";
 import sendMail from "@/actions/SendMail";
 import { UserIcon } from "../../../icon/UserIcon";
 import EnvelopeIcon from "../../../icon/EnvelopeIcon";
+import ContactMethodComponent from "./ContactMethodComponent";
+import Link from "next/link";
 
 export default function MailForm() {
   const [name, setName] = useState("");
@@ -87,9 +88,16 @@ export default function MailForm() {
           size="lg"
           maxRows={7}
         />
+        <div className="lg:hidden">
+          You can take a look my resume at{" "}
+          <Link className="font-bold" href={"/resume"}>
+            here
+          </Link>
+          !
+        </div>
         <div className="flex flex-row justify-between gap-2">
-          <div className="sm:hidden">
-            <ContactMethod />
+          <div className="lg:hidden">
+            <ContactMethodComponent />
           </div>
           <button
             type="submit"

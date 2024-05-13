@@ -1,7 +1,7 @@
 import { Button, Link } from "@nextui-org/react";
 import type { Metadata } from "next";
 // import ContactMethod from "../components/contactmethod";
-import MailForm from "../components/mailform";
+import MailForm from "../components/MailFormComponent";
 import ContactMethodComponent from "../components/ContactMethodComponent";
 import { FileIcon } from "../../../icon/FileIcon";
 
@@ -21,7 +21,7 @@ export default function Home() {
       </span>
 
       <div className="flex grow xl:flex-row">
-        <section className="my-auto hidden w-full flex-col gap-8 xl:flex">
+        <section className="my-auto hidden w-full flex-col gap-8 lg:flex">
           <div className="flex flex-col gap-4">
             <span className="text-3xl font-light">Curriculum Vitae (CV)</span>
             <Button
