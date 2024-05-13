@@ -57,7 +57,7 @@ export default function Navigator() {
         />
       </NavbarContent>
 
-      <NavbarContent className="hidden gap-4 sm:flex" justify="end">
+      <NavbarContent className="hidden gap-8 sm:flex" justify="end">
         {menuItems.map((item) => (
           <NavbarItem
             key={item.key}

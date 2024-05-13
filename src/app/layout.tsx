@@ -5,6 +5,7 @@ import { Providers } from "./providers";
 import Preloader from "./components/preloader";
 import Navigator from "./components/nav";
 import { Analytics } from "@vercel/analytics/react";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({
@@ -42,6 +43,7 @@ export default function RootLayout({
             {children}
           </div>
         </Providers>
+        <Toaster richColors />
         <Analytics />
       </body>
     </html>

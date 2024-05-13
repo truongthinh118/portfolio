@@ -1,28 +1,24 @@
 "use client";
 import { useState, useMemo } from "react";
 import { Input, Textarea } from "@nextui-org/react";
-import {
-  Modal,
-  ModalContent,
-  ModalBody,
-  useDisclosure,
-} from "@nextui-org/react";
-import emailjs from "@emailjs/browser";
 import ContactMethod from "./contactmethod";
+import sendMail from "@/actions/SendMail";
+import { UserIcon } from "../../../icon/UserIcon";
+import EnvelopeIcon from "../../../icon/EnvelopeIcon";
 
 export default function MailForm() {
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
   const [message, setMessage] = useState("");
 
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const [isSuccess, setSuccess] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
-
-  const labelClass = { label: "after:content-none" };
-  const modalButtonClass = isSuccess
-    ? "hover:bg-green-400 active:bg-green-500"
-    : "hover:bg-red-400 active:bg-red-500";
+  const inputClass = {
+    base: "data-[has-label=true]:mt-[calc(theme(fontSize.large)_+_16px)]",
+    label:
+      "text-3xl after:text-inherit pb-1.5 group-data-[filled-within=true]:text-current font-light top-[40%]",
+    inputWrapper: "rounded-[5px] min-h-16 h-16",
+    input:
+      "text-lg group-data-[has-value=true]:text-current placeholder:text-current placeholder:italic",
+  };
 
   const validateEmail = (address: string) =>
     address.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
@@ -33,133 +29,82 @@ export default function MailForm() {
     return validateEmail(address) ? false : true;
   }, [address]);
 
-  const send = () => {
-    if (name && address && message && validateEmail(address)) {
-      emailjs
-        .send(
-          "service_uqp42mn",
-          "template_cam0i4u",
-          { name, email: address, message },
-          {
-            publicKey: "2gh4dkYQw-bT5Z6s9",
-            limitRate: { throttle: 30000 },
-          },
-        )
-        .then(
-          () => {
-            setSuccess(true);
-          },
-          (error) => {
-            setSuccess(false);
-            setErrorMessage(error.text);
-          },
-        )
-        .finally(() => onOpen());
-    }
-  };
-
   return (
     <>
-      <div className="mx-auto flex w-max justify-center md:w-7/12">
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            send();
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          validateEmail(address);
+          sendMail(name, address, message);
+        }}
+        className="flex flex-col gap-8 p-8"
+      >
+        <Input
+          type="name"
+          classNames={inputClass}
+          label="Your Name"
+          placeholder="Input Your Name"
+          labelPlacement="outside"
+          startContent={<UserIcon className="h-12 p-2 text-current" />}
+          value={name}
+          onValueChange={setName}
+          autoComplete="given-name"
+          isRequired
+          isClearable
+          fullWidth
+        />
+        <Input
+          type="email"
+          classNames={inputClass}
+          label="Your Email"
+          placeholder="Input Your Email"
+          labelPlacement="outside"
+          startContent={
+            <EnvelopeIcon className="h-12 fill-current p-2 text-current" />
+          }
+          autoComplete="email"
+          value={address}
+          onValueChange={setAddress}
+          errorMessage={isInvalid && "Please enter a valid email"}
+          isRequired
+          isClearable
+          fullWidth
+        />
+        <Textarea
+          classNames={{
+            label:
+              "text-3xl after:text-inherit group-data-[filled-within=true]:text-current font-light",
+            inputWrapper: "rounded-[5px]",
+            input:
+              "text-lg group-data-[has-value=true]:text-current placeholder:text-current placeholder:italic",
           }}
-          className="rounded-xlp-8 flex w-full flex-col gap-4 text-[#5E6697] "
-        >
-          <Input
-            type="name"
-            classNames={labelClass}
-            label="Your Name"
-            placeholder="Input Your Name"
-            labelPlacement="outside"
-            startContent={<i className="icon-form bi bi-person-circle" />}
-            value={name}
-            onValueChange={setName}
-            autoComplete="given-name"
-            isRequired
-            isClearable
-          />
-          <Input
-            type="email"
-            classNames={labelClass}
-            label="Email"
-            placeholder="Input Your Email"
-            labelPlacement="outside"
-            startContent={<i className="icon-form bi bi-envelope" />}
-            autoComplete="email"
-            value={address}
-            onValueChange={setAddress}
-            errorMessage={isInvalid && "Please enter a valid email"}
-            isRequired
-            isClearable
-          />
-          <Textarea
-            classNames={labelClass}
-            label="Your Message"
-            labelPlacement="outside"
-            placeholder="Enter your message"
-            value={message}
-            onValueChange={setMessage}
-            isRequired
-          />
-          <div className="flex flex-row justify-between gap-2">
-            <div className="sm:hidden">
-              <ContactMethod />
-            </div>
-            <button
-              type="submit"
-              className="w-full rounded-lg
-                                bg-blue-700 
+          label="Your Message"
+          labelPlacement="outside"
+          placeholder="Enter your message"
+          value={message}
+          onValueChange={setMessage}
+          isRequired
+          size="lg"
+          maxRows={7}
+        />
+        <div className="flex flex-row justify-between gap-2">
+          <div className="sm:hidden">
+            <ContactMethod />
+          </div>
+          <button
+            type="submit"
+            className="w-full rounded-[5px]
+                                bg-[#92755F]
                                 px-5 py-2.5 text-center 
                                 text-sm font-medium text-white 
-                                hover:bg-blue-800 focus:outline-none focus:ring-4 
-                                focus:ring-blue-300 
-                                dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
-              Send
-            </button>
-          </div>
-        </form>
-      </div>
-
-      <Modal
-        backdrop="transparent"
-        isOpen={isOpen}
-        onOpenChange={onOpenChange}
-        isDismissable={false}
-        isKeyboardDismissDisabled={true}
-        radius="sm"
-        placement="bottom"
-        classNames={{
-          wrapper: "w-1/5	justify-start",
-          closeButton: modalButtonClass,
-        }}
-        disableAnimation
-      >
-        <ModalContent>
-          {(onClose) => (
-            <>
-              <ModalBody
-                className={`flex-row gap-4 px-3 ${isSuccess ? "bg-emerald-400" : "bg-rose-400"}`}
-              >
-                {isSuccess ? (
-                  <>
-                    <i className="bi bi-check-circle" />
-                    Message sent successfully.
-                  </>
-                ) : (
-                  <>
-                    <i className="bi bi-x-circle" />
-                    {errorMessage}
-                  </>
-                )}
-              </ModalBody>
-            </>
-          )}
-        </ModalContent>
-      </Modal>
+                                hover:bg-[#92755F]/[.8] focus:bg-[#92755F]/[.8] focus:outline-none 
+                                focus:ring-4
+                               "
+          >
+            Send
+          </button>
+        </div>
+      </form>
     </>
   );
 }

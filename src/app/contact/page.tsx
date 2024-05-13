@@ -13,19 +13,21 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main
-      className="container mx-auto flex flex-col justify-evenly gap-8 p-8"
+      className="container mx-auto flex flex-col gap-8 px-8 py-16"
       style={{ minHeight: "calc(100vh - 4rem)" }}
     >
-      <div className="w-min text-8xl font-bold">For further cooperation!</div>
+      <span className="w-min text-6xl font-bold sm:text-8xl">
+        For further cooperation!
+      </span>
 
-      <div className="flex xl:flex-row">
-        <section className="hidden w-full flex-col gap-8 xl:flex">
+      <div className="flex grow xl:flex-row">
+        <section className="my-auto hidden w-full flex-col gap-8 xl:flex">
           <div className="flex flex-col gap-4">
             <span className="text-3xl font-light">Curriculum Vitae (CV)</span>
             <Button
               isIconOnly
               className="h-16 w-16 rounded-full bg-current text-inherit"
-              href=""
+              href="/resume"
               as={Link}
               isExternal
             >
@@ -41,9 +43,9 @@ export default function Home() {
             />
           </div>
         </section>
-        <div className="w-full">
+        <section className="m-auto w-full">
           <MailForm />
-        </div>
+        </section>
       </div>
     </main>
   );
