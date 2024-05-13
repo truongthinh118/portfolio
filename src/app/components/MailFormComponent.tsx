@@ -88,7 +88,7 @@ export default function MailForm() {
           size="lg"
           maxRows={7}
         />
-        <div className="lg:hidden">
+        <div className="text-tiny sm:text-base lg:hidden">
           You can take a look my resume at{" "}
           <Link className="font-bold" href={"/resume"}>
             here
