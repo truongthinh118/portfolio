@@ -16,7 +16,7 @@ export default function Home() {
       className="container mx-auto flex flex-col gap-8 px-8 py-16"
       style={{ minHeight: "calc(100vh - 4rem)" }}
     >
-      <span className="w-min text-6xl font-bold sm:text-8xl">
+      <span className="w-min text-[3.5rem] font-bold leading-none sm:text-8xl">
         For further cooperation!
       </span>
 
