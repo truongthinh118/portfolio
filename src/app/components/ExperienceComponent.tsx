@@ -106,7 +106,7 @@ function ExperienceInfomation({
         fontFamily: "__Inter_aaf875",
       }}
     >
-      <div className="flex h-auto w-full flex-row items-center justify-between gap-1">
+      <div className="flex h-auto w-full flex-row-reverse items-center justify-between gap-1">
         <Button
           className="h-16 min-h-16 w-16 min-w-16 bg-neutral-100 sm:h-24 sm:min-h-24 sm:w-24 sm:min-w-24 xl:h-32 xl:min-h-32 xl:w-32 xl:min-w-32"
           isIconOnly
@@ -118,23 +118,23 @@ function ExperienceInfomation({
         </Button>
 
         <div className="flex h-full flex-col justify-evenly">
-          <div className="flex flex-row items-center gap-2 lg:gap-6">
+          <div className="flex flex-row items-center gap-2 lg:gap-4">
             <UserIcon className="h-3 fill-current text-current sm:h-10 sm:p-2" />
-            <span className="xs:text-sm text-sm font-light sm:text-lg 2xl:text-2xl ">
+            <span className="xs:text-lg text-sm font-light 2xl:text-2xl ">
               Role: {item.role}
             </span>
           </div>
 
-          <div className="flex flex-row items-center gap-2 lg:gap-6">
+          <div className="flex flex-row items-center gap-2 lg:gap-4">
             <CalendarIcon className="h-3 fill-current text-current sm:h-10 sm:p-2" />
-            <span className="xs:text-sm text-sm font-light sm:text-lg  2xl:text-2xl">
+            <span className="xs:text-lg text-sm font-light  2xl:text-2xl">
               Duration: {item.duration}
             </span>
           </div>
         </div>
       </div>
 
-      <blockquote className="text-end text-base font-light italic sm:text-lg 2xl:text-2xl">
+      <blockquote className="text-justify text-base font-light italic sm:text-lg 2xl:text-2xl">
         "{item.description}"
       </blockquote>
     </CardBody>
