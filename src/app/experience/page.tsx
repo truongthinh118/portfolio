@@ -14,7 +14,7 @@ export default function ExperiencePage() {
         style={{ minHeight: "calc(100vh - 4rem)" }}
       >
         <div className="row-span-2 flex lg:row-span-3">
-          <h1 className="m-auto py-10 text-6xl font-semibold lg:text-8xl">
+          <h1 className="m-auto py-10 text-5xl font-semibold sm:text-6xl lg:text-8xl">
             MY EXPERIENCE
           </h1>
         </div>

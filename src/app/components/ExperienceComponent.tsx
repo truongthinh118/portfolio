@@ -18,7 +18,7 @@ export default function ExperienceComponent() {
         >
           <CardBody className="ml-[20%] h-[70%] max-h-[70%] max-w-[70%] items-center justify-center overflow-visible rounded-[5px] border border-[#7A7673] p-0">
             <span
-              className="absolute left-0 -translate-x-1/2 bg-[#ECE8E5] p-1 text-7xl text-[#92755F] sm:text-8xl xl:text-[7.5rem] 2xl:text-9xl"
+              className="absolute left-0 -translate-x-1/2 bg-[#ECE8E5] p-1 text-6xl text-[#92755F] sm:text-8xl xl:text-[7.5rem] 2xl:text-9xl"
               style={{
                 fontFamily: "__Jomhuria_2f4731",
                 fontWeight: "400",
@@ -28,7 +28,7 @@ export default function ExperienceComponent() {
               {item.company}
             </span>
             <span
-              className="w-min text-center text-3xl font-light text-[#92755F] sm:text-4xl xl:text-[2.75rem] xl:leading-none 2xl:text-5xl"
+              className="w-min text-center text-2xl font-light text-[#92755F] sm:text-4xl xl:text-[2.75rem] xl:leading-none 2xl:text-5xl"
               style={{ fontFamily: "__Inter_aaf875", fontStyle: "normal" }}
             >
               {item.role}
