@@ -23,11 +23,6 @@ body {
   position: relative;
 }
 
-#app-container {
-  margin-right: auto;
-  margin-left: auto;
-}
-
 header {
   color: #b97361;
   z-index: 9000;
