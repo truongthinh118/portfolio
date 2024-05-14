@@ -2,8 +2,8 @@
 import { useState, useMemo } from "react";
 import { Input, Textarea } from "@nextui-org/react";
 import sendMail from "@/actions/SendMail";
-import { UserIcon } from "../../../icon/UserIcon";
-import EnvelopeIcon from "../../../icon/EnvelopeIcon";
+import { UserIcon } from "./icon/UserIcon";
+import EnvelopeIcon from "./icon/EnvelopeIcon";
 import ContactMethodComponent from "./ContactMethodComponent";
 import Link from "next/link";
 
