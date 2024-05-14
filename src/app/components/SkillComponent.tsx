@@ -5,6 +5,7 @@ import LinuxIcon from "./icon/LinuxIcon";
 import { PostgreSQLIcon } from "./icon/PostgresqlIcon";
 import { JenkinsIcon } from "./icon/JenkinsIcon";
 import { USLangIcon } from "./icon/USLangIcon";
+import { CNLangIcon } from "./icon/CNLangIcon";
 
 const progamming = [
   { name: "Java", icon: <JavaIcon className="h-6" /> },
@@ -15,7 +16,7 @@ const progamming = [
 
 const languages = [
   { name: "English", icon: <USLangIcon className="h-8" /> },
-  { name: "Chinese", icon: "" },
+  { name: "Chinese", icon: <CNLangIcon className="h-8" /> },
 ];
 
 export default function SkillsComponent() {
