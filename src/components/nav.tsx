@@ -10,7 +10,8 @@ import {
   NavbarContent,
   NavbarItem,
 } from "@nextui-org/react";
-import LanguageMenu from "./languagemenu";
+import LanguageMenu from "./LanguageMenuComponent";
+import Image from "next/image";
 
 export default function Navigator() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -43,10 +44,13 @@ export default function Navigator() {
       isBlurred
     >
       <NavbarBrand onClick={() => setLocation("")}>
-        <Link href={"/"}>
-          <img
-            src="logo.svg"
-            className="h-12 transition-all ease-in-out hover:scale-125"
+        <Link href={"/"} className="relative h-12 w-24">
+          <Image
+            alt=""
+            fill
+            src="/logo.svg"
+            className="transition-all ease-in-out hover:scale-125"
+            priority
           />
         </Link>
       </NavbarBrand>

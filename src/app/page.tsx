@@ -1,5 +1,5 @@
 import { Card } from "@nextui-org/react";
-import ProfileComponent from "./components/ProfileComponent";
+import ProfileComponent from "../components/ProfileComponent";
 import Image from "next/image";
 
 export default function Home() {

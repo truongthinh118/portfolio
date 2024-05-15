@@ -1,5 +1,5 @@
 import { Poppins } from "next/font/google";
-import ExperienceComponent from "../components/ExperienceComponent";
+import ExperienceComponent from "../../components/ExperienceComponent";
 
 const poppins = Poppins({
   subsets: ["latin"],
