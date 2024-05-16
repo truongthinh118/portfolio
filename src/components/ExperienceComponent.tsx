@@ -73,7 +73,7 @@ function ExperienceCard({ item }: { item: ExperienceProps }) {
           }}
         >
           <span
-            className="absolute left-0 -translate-x-1/2 bg-[#ECE8E5] p-1 text-6xl sm:text-8xl xl:text-[7.5rem] 2xl:text-9xl"
+            className="absolute left-0 -translate-x-1/2 bg-background p-1 text-6xl sm:text-8xl xl:text-[7.5rem] 2xl:text-9xl"
             style={{
               fontFamily: "__Jomhuria_2f4731",
               fontWeight: "400",

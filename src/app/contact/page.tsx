@@ -30,14 +30,14 @@ export default function Home() {
               as={Link}
               isExternal
             >
-              <FileIcon className="h-10 fill-current text-white" />
+              <FileIcon className="h-10 fill-current text-white dark:text-default-100" />
             </Button>
           </div>
           <div className="space-y-4">
             <span className="text-3xl font-light">Contact me</span>
             <ContactMethodComponent
               base="gap-8"
-              icon="h-10 text-white"
+              icon="h-10 text-white dark:text-default-100"
               button="h-16 w-16 bg-current rounded-full"
             />
           </div>

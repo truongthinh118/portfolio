@@ -107,6 +107,7 @@ export default function MailForm() {
                                 text-sm font-medium text-white 
                                 hover:bg-[#92755F]/[.8] focus:bg-[#92755F]/[.8] focus:outline-none 
                                 focus:ring-4
+                                dark:bg-default-100
                                "
           >
             Send
