@@ -13,7 +13,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
       navigate={router.push}
       className="hidden"
     >
-      <NextThemesProvider attribute="class">{children}</NextThemesProvider>
+      <NextThemesProvider enableSystem={false} attribute="class">
+        {children}
+      </NextThemesProvider>
     </NextUIProvider>
   );
 }
