@@ -55,7 +55,7 @@ function ExperienceCard({ item }: { item: ExperienceProps }) {
       animate={{ rotateY: flip ? 0 : 180 }}
     >
       <Card
-        className="size-full justify-center bg-[#ECE8E5]"
+        className="size-full justify-center bg-background text-content1-foreground"
         radius="none"
         isPressable
         disableRipple
@@ -73,7 +73,7 @@ function ExperienceCard({ item }: { item: ExperienceProps }) {
           }}
         >
           <span
-            className="absolute left-0 -translate-x-1/2 bg-[#ECE8E5] p-1 text-6xl text-[#92755F] sm:text-8xl xl:text-[7.5rem] 2xl:text-9xl"
+            className="absolute left-0 -translate-x-1/2 bg-[#ECE8E5] p-1 text-6xl sm:text-8xl xl:text-[7.5rem] 2xl:text-9xl"
             style={{
               fontFamily: "__Jomhuria_2f4731",
               fontWeight: "400",
@@ -83,7 +83,7 @@ function ExperienceCard({ item }: { item: ExperienceProps }) {
             {item.company}
           </span>
           <span
-            className="w-min text-center text-2xl font-light text-[#92755F] sm:text-4xl xl:text-[2.75rem] xl:leading-none 2xl:text-5xl"
+            className="w-min text-center text-2xl font-light sm:text-4xl xl:text-[2.75rem] xl:leading-none 2xl:text-5xl"
             style={{ fontFamily: "__Inter_aaf875", fontStyle: "normal" }}
           >
             {item.role}
@@ -104,7 +104,7 @@ function ExperienceInfomation({
 }) {
   return (
     <CardBody
-      className="exp-card-back absolute flex h-full flex-col items-center justify-start gap-2 text-2xl text-[#92755F] lg:p-6"
+      className="exp-card-back absolute flex h-full flex-col items-center justify-start gap-2 text-2xl lg:p-6"
       style={{
         transform: `rotateY(${flip ? "180deg" : "0"})`,
         transitionDuration: "700ms",
@@ -113,7 +113,7 @@ function ExperienceInfomation({
     >
       <div className="flex h-auto w-full flex-row items-center justify-between gap-1">
         <Button
-          className="h-16 min-h-16 w-16 min-w-16 bg-neutral-100 sm:h-24 sm:min-h-24 sm:w-24 sm:min-w-24 xl:h-32 xl:min-h-32 xl:w-32 xl:min-w-32"
+          className="h-16 min-h-16 w-16 min-w-16  sm:h-24 sm:min-h-24 sm:w-24 sm:min-w-24 xl:h-32 xl:min-h-32 xl:w-32 xl:min-w-32"
           isIconOnly
           href={item.href}
           as={Link}
@@ -139,7 +139,7 @@ function ExperienceInfomation({
         </div>
       </div>
 
-      <blockquote className="text-justify text-base font-light italic sm:text-lg 2xl:text-2xl">
+      <blockquote className="text-base font-light italic sm:text-lg 2xl:text-2xl">
         "{item.description}"
       </blockquote>
     </CardBody>

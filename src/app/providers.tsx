@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { NextUIProvider } from "@nextui-org/system";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -12,7 +13,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       navigate={router.push}
       className="hidden"
     >
-      {children}
+      <NextThemesProvider attribute="class">{children}</NextThemesProvider>
     </NextUIProvider>
   );
 }

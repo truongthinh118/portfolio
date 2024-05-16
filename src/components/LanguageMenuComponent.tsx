@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
   Dropdown,
@@ -10,6 +10,7 @@ import {
 } from "@nextui-org/react";
 import { EnNavIcon } from "./icon/EnNavIcon";
 import { ZhNavcon } from "./icon/ZhNavIcon";
+import { usePathname } from "next/navigation";
 
 interface LanguageMenuProps {
   lang?: string;
@@ -24,18 +25,23 @@ export default function LanguageMenu(props: LanguageMenuProps) {
     zh: <ZhNavcon className={iconClasses} />,
   };
 
+  const pathname = usePathname();
+  useEffect(() => {
+    console.log(pathname);
+  });
+
   const [selectedKeys, setSelectedKeys] = useState("en");
 
   return (
     <>
-      <Dropdown aria-label="dropdown menu section" className="min-w-[20px]">
+      <Dropdown aria-label="language menu section" className="min-w-[20px]">
         <DropdownTrigger>
           <Button className="min-w-min p-4" variant="light" disableRipple>
             {lang[selectedKeys]}
           </Button>
         </DropdownTrigger>
         <DropdownMenu
-          aria-label="Single selection example"
+          aria-label="language menu"
           variant="flat"
           selectionMode="single"
           hideSelectedIcon

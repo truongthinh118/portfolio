@@ -14,7 +14,7 @@ export default function ContactMethodComponent({
   button?: string;
 }) {
   const iconClass = twMerge("h-8 fill-current", icon);
-  const buttonClass = twMerge("bg-inherit text-inherit", button);
+  const buttonClass = twMerge("bg-inherit ", button);
 
   const contactMethods = [
     {

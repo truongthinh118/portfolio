@@ -25,7 +25,7 @@ export default function Home() {
             <span className="text-3xl font-light">Curriculum Vitae (CV)</span>
             <Button
               isIconOnly
-              className="h-16 w-16 rounded-full bg-current text-inherit"
+              className="h-16 w-16 rounded-full bg-current"
               href="/resume"
               as={Link}
               isExternal

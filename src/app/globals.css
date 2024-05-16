@@ -18,8 +18,8 @@ html {
 }
 
 body {
-  background: #ece8e5;
-  color: #76726f;
+  /* background: #ece8e5; */
+  /* color: #76726f; */
   position: relative;
 }
 
@@ -31,30 +31,31 @@ header {
 }
 
 .profile-card {
-  background-color: #ece8e5;
+  /* background-color: hsl(var(--nextui-background)); */
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.objectives {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem 5rem;
-  color: #92755f;
-
-  /* @media (min-width: 1024px) {
+@media (min-width: 1024px) {
+  .objectives {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
-  @media (min-width: 1536px) {
-    objectives,
-    .exp-intro span {
-      font-size: 1.5rem;
-      line-height: 2rem;
-      gap: 1.5rem;
-    }
-  } */
+}
+@media (min-width: 1536px) {
+  .objectives {
+    font-size: 1.375rem;
+    line-height: 2rem;
+    gap: 1.5rem;
+  }
+}
+
+.objectives {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 4rem 2rem 5rem;
+  /* color: #92755f; */
 }
 
 .objectives span {

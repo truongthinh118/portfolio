@@ -5,18 +5,19 @@ import { Divider } from "@nextui-org/react";
 
 export default function ProfileComponent() {
   return (
-    <div className="profile-card items-center px-5 py-8 gap-4">
+    <div className="profile-card items-center gap-4 bg-background px-5 py-8 text-foreground">
       <Image
-        src={"/logo2.jpg"}
+        src={"/self.jpeg"}
+        alt=""
         width={200}
         height={200}
-        alt=""
-        className="rounded-full"
+        style={{ width: "200px", height: "200px" }}
+        className="rounded-full object-none"
       />
 
       <div className="flex flex-col items-center lg:gap-1 2xl:gap-2">
-        <span className="text-3xl 2xl:text-5xl font-bold">Truong Thinh</span>
-        <span className="text-lg 2xl:text-2xl font-light">
+        <span className="text-3xl font-bold 2xl:text-5xl">Truong Thinh</span>
+        <span className="text-lg font-light 2xl:text-2xl">
           Software Engineer
         </span>
         <ContactMethodComponent />

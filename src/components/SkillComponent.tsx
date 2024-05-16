@@ -8,10 +8,10 @@ import { USLangIcon } from "./icon/USLangIcon";
 import { CNLangIcon } from "./icon/CNLangIcon";
 
 const progamming = [
-  { name: "Java", icon: <JavaIcon className="h-6" /> },
-  { name: "Linux", icon: <LinuxIcon className="h-6" /> },
-  { name: "PostgreSQL", icon: <PostgreSQLIcon className="h-6" /> },
-  { name: "Jenkins", icon: <JenkinsIcon className="h-6" /> },
+  { name: "Java", icon: <JavaIcon className="h-6 fill-current" /> },
+  { name: "Linux", icon: <LinuxIcon className="h-6 fill-current" /> },
+  { name: "PostgreSQL", icon: <PostgreSQLIcon className="h-6 fill-current" /> },
+  { name: "Jenkins", icon: <JenkinsIcon className="h-6 fill-current" /> },
 ];
 
 const languages = [

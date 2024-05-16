@@ -18,7 +18,6 @@ export default function Preloader() {
       {isVisible && (
         <motion.div
           className="preloader"
-          key="preloader"
           initial={{ opacity: 1 }}
           animate={{ opacity: 0, transitionEnd: { display: "none" } }}
           exit={{ opacity: 0 }}
