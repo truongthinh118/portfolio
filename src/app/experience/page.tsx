@@ -1,16 +1,11 @@
-import { Poppins } from "next/font/google";
-import ExperienceComponent from "../../components/ExperienceComponent";
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400"],
-});
+import { font } from "@/styles/font";
+import ExperienceComponent from "@/components/ExperienceComponent";
 
 export default function ExperiencePage() {
   return (
     <>
       <main
-        className={`${poppins.className} grid grid-rows-11 bg-neutral-100`}
+        className={`${font.poppins.className} grid grid-rows-11 bg-default`}
         style={{ minHeight: "calc(100vh - 4rem)" }}
       >
         <div className="row-span-2 flex lg:row-span-3">

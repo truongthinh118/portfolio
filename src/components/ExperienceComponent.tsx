@@ -67,14 +67,14 @@ function ExperienceCard({ item }: { item: ExperienceProps }) {
         }}
       >
         <CardBody
-          className="exp-card-front absolute ml-[20%] h-[70%] max-h-[70%] max-w-[70%] items-center justify-center overflow-visible rounded-[5px] border border-[#7A7673] p-0"
+          className="exp-card-front absolute ml-[20%] h-[70%] max-h-[70%] max-w-[70%] items-center justify-center overflow-visible rounded-[5px] border border-[#7A7673] p-0 dark:border-white"
           style={{
             transform: `rotateY(${flip ? "0" : "180deg"})`,
             transitionDuration: "700ms",
           }}
         >
           <span
-            className={`absolute left-0 -translate-x-1/2 bg-[#ECE8E5] p-1 text-6xl sm:text-8xl xl:text-[7.5rem] 2xl:text-9xl ${font.jomhuria.className}`}
+            className={`absolute left-0 -translate-x-1/2 bg-gradient-to-r from-background from-[49%] via-background via-[49%] to-transparent to-100% p-0 text-6xl sm:text-8xl xl:text-[7.5rem] 2xl:text-9xl ${font.jomhuria.className}`}
           >
             {item.company}
           </span>

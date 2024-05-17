@@ -1,9 +1,11 @@
 import { Card } from "@nextui-org/react";
 import ProfileComponent from "../components/ProfileComponent";
 import Image from "next/image";
+import { isMobile } from "@/actions/Util";
+import HomeMobilePage from "@/components/mobile/MobileHomeComponent";
 
 export default function Home() {
-  return (
+  return !isMobile ? (
     <main
       className="relative hidden grid-cols-7 grid-rows-5 gap-2.5 bg-default p-2.5 lg:grid"
       style={{ minHeight: "calc(100vh - 4rem)" }}
@@ -16,7 +18,7 @@ export default function Home() {
         <span className="absolute z-0 size-full bg-[url('/background-2.jpeg')] bg-cover bg-[center_bottom_20%] bg-no-repeat opacity-30" />
 
         <div className="relative z-10 flex h-full flex-col">
-          <div className="flex h-full flex-col justify-center px-8 font-semibold text-content2-foreground lg:text-6xl 2xl:text-8xl dark:text-foreground">
+          <div className="flex h-full flex-col justify-center px-8 font-semibold text-content2-foreground dark:text-foreground lg:text-6xl 2xl:text-8xl">
             <p>WELCOME TO</p>
             <p>MY WEBSITE!</p>
           </div>
@@ -53,7 +55,10 @@ export default function Home() {
               Objectives
             </span>
 
-            <div className="objectives text-content1-foreground">
+            <div
+              className="objectives text-content1-foreground"
+              style={{ padding: "2rem 4rem 2rem 5rem" }}
+            >
               <span>
                 Short term:
                 <p>
@@ -86,7 +91,10 @@ export default function Home() {
               Education
             </span>
 
-            <div className="objectives text-content1-foreground">
+            <div
+              className="objectives text-content1-foreground"
+              style={{ padding: "2rem 4rem 2rem 5rem" }}
+            >
               <span>
                 University of Economics and Law - Vietnam National University
                 HCMC
@@ -100,5 +108,7 @@ export default function Home() {
         </div>
       </div>
     </main>
+  ) : (
+    <HomeMobilePage />
   );
 }

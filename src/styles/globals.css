@@ -54,7 +54,6 @@ header {
 .objectives {
   display: flex;
   flex-direction: column;
-  padding: 2rem 4rem 2rem 5rem;
   /* color: #92755f; */
 }
 
