@@ -1,12 +1,11 @@
 "use client";
-import { useIsSSR } from "@react-aria/ssr";
 
 const MOBILE_SCREEN_WIDTH = 700;
 
 export const isMobile = () => {
-  let isSSR = useIsSSR();
+  //   let isSSR = useIsSSR();
 
-  if (isSSR || typeof window === "undefined") {
+  if (typeof window === "undefined") {
     return false;
   }
 
