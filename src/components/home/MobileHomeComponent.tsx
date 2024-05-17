@@ -7,11 +7,11 @@ export default function HomeMobilePage() {
   return (
     <>
       <main
-        className="container mx-auto flex flex-col gap-4 bg-default px-4"
+        className="container mx-auto flex flex-col gap-4 bg-default px-4 lg:hidden"
         style={{ minHeight: "calc(100vh - 4rem)" }}
       >
         <h1
-          className={`${font.poppins.className} py-2 text-3xl font-semibold text-content1-foreground`}
+          className={`${font.poppins.className} py-2 text-[2.5rem] font-semibold leading-none text-content1-foreground`}
         >
           WELCOME TO
           <br /> MY WEBSITE!
