@@ -52,7 +52,7 @@ header {
 }
 
 .objectives {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   /* color: #92755f; */
 }
@@ -63,6 +63,9 @@ header {
 
 .objectives span p {
   font-weight: 300;
+}
+
+.introduction-icon {
 }
 
 /* 
