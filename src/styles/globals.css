@@ -18,20 +18,14 @@ html {
 }
 
 body {
-  /* background: #ece8e5; */
-  /* color: #76726f; */
   position: relative;
 }
 
 header {
-  color: #b97361;
-  z-index: 9000;
-  display: flex;
-  align-items: center;
+  color: hsl(var(--nextui-content3-foreground));
 }
 
 .profile-card {
-  /* background-color: hsl(var(--nextui-background)); */
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -52,9 +46,7 @@ header {
 }
 
 .objectives {
-  /* display: flex; */
   flex-direction: column;
-  /* color: #92755f; */
 }
 
 .objectives span {

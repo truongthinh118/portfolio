@@ -10,11 +10,11 @@ export default function IntroductionComponent() {
           <BullEyesIcon className="h-7 lg:h-20" />
         </span>
 
-        <span className="absolute left-[50%] -translate-y-1/2 bg-gradient-to-b from-default from-50% via-transparent via-50% px-1 font-bold max-lg:-translate-x-1/2 max-lg:text-content1-foreground lg:left-12 lg:text-3xl">
+        <span className="absolute left-[50%] -translate-y-1/2 bg-gradient-to-b from-default from-50% via-transparent via-50% px-1 font-bold max-lg:-translate-x-1/2 lg:left-12 lg:text-3xl">
           Objectives
         </span>
 
-        <div className="objectives px-2 pb-6 pt-3 max-lg:text-sm lg:py-8 lg:pl-20 lg:pr-16 lg:text-content1-foreground">
+        <div className="objectives px-2 pb-6 pt-3 text-content1-foreground max-lg:text-sm lg:py-8 lg:pl-20 lg:pr-16">
           <span>
             Short term:
             <p>
@@ -45,11 +45,11 @@ export default function IntroductionComponent() {
           </div>
         </span>
 
-        <span className="absolute left-[50%] -translate-y-1/2 bg-gradient-to-b from-default from-50% via-transparent via-50% px-1 font-bold max-lg:-translate-x-1/2 max-lg:text-content1-foreground lg:left-12 lg:text-3xl">
+        <span className="absolute left-[50%] -translate-y-1/2 bg-gradient-to-b from-default from-50% via-transparent via-50% px-1 font-bold max-lg:-translate-x-1/2 lg:left-12 lg:text-3xl">
           Education
         </span>
 
-        <div className="objectives px-2 pb-6 pt-3 max-lg:text-sm lg:py-8 lg:pl-20 lg:pr-16 lg:text-content1-foreground">
+        <div className="objectives px-2 pb-6 pt-3 text-content1-foreground max-lg:text-sm lg:py-8 lg:pl-20 lg:pr-16">
           <span>
             University of Economics and Law - Vietnam National University HCMC
             <p>

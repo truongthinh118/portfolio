@@ -19,7 +19,7 @@ export default function DesktopHomePage() {
           <span className="absolute z-0 size-full bg-[url('/background-2.jpeg')] bg-cover bg-[center_bottom_20%] bg-no-repeat opacity-30 dark:bg-[url('/welcome-background-dark.png')] dark:bg-bottom" />
 
           <div className="relative z-10 flex h-full flex-col">
-            <div className="flex h-full flex-col justify-center px-8 font-semibold text-content2-foreground dark:text-foreground lg:text-6xl 2xl:text-8xl">
+            <div className="flex h-full flex-col justify-center px-8 font-semibold text-content2-foreground lg:text-6xl 2xl:text-8xl">
               <p>WELCOME TO</p>
               <p>MY WEBSITE!</p>
             </div>

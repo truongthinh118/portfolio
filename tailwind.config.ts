@@ -44,6 +44,9 @@ const config: Config = {
             content2: {
               foreground: "#5F5B59",
             },
+            content3: {
+              foreground: "#b97361",
+            },
           },
         },
         dark: {
@@ -65,10 +68,13 @@ const config: Config = {
               foreground: "#DBD8E3",
             },
             content1: {
-              foreground: "#DBD8E3",
+              foreground: "#FEFAF6",
             },
             content2: {
-              foreground: "#5F5B59",
+              foreground: "#DBD8E3",
+            },
+            content3: {
+              foreground: "#DBD8E3",
             },
           },
         },

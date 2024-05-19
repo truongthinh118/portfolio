@@ -1,9 +1,7 @@
 import { font } from "@/styles/font";
-import Image from "next/image";
 import ContactMethodComponent from "../ContactMethodComponent";
-import { Card, Divider } from "@nextui-org/react";
+import { Divider } from "@nextui-org/react";
 import AvatarComponent from "./AvatarComponent";
-import { BullEyesIcon } from "../icon/BullEyesIcon";
 import IntroductionComponent from "./IntroductionComponent";
 import StatComponent from "./StatComponent";
 
@@ -30,12 +28,17 @@ export default function HomeMobilePage() {
               <span className="absolute z-0 size-full rounded-r-xl bg-[url('/background-2.jpeg')] bg-cover bg-[center_bottom_20%] bg-no-repeat opacity-30" />
               <div className="flex size-full py-2 pl-[4.5rem]">
                 <div className="mx-auto flex flex-col items-center justify-between">
-                  <article className="text-center">
-                    <p className="text-2xl font-bold">Truong Thinh</p>
+                  <article className="z-10 text-center">
+                    <p
+                      className="text-[5vw] font-bold"
+                      style={{ lineHeight: "normal" }}
+                    >
+                      Truong Thinh
+                    </p>
                     <p className="text-sm">Software Developer</p>
                     <Divider />
                   </article>
-                  <ContactMethodComponent icon="h-6 text-background" />
+                  <ContactMethodComponent icon="z-10 h-6 text-background" />
                 </div>
               </div>
             </div>

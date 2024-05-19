@@ -36,7 +36,7 @@ export default function Navigator() {
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       classNames={{
-        base: "bg-white/[.7]",
+        base: "bg-white/[.7] dark:bg-default-600/[.7]",
         wrapper: "max-w-full",
       }}
       isBlurred
