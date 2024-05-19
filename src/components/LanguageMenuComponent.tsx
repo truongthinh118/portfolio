@@ -18,7 +18,8 @@ interface LanguageMenuProps {
 
 export default function LanguageMenu(props: LanguageMenuProps) {
   const itemClasses = "flex items-center gap-2";
-  const iconClasses = "h-3.5 w-3.5 rounded-full";
+  const iconClasses =
+    "h-3.5 w-3.5 rounded-full dark:border-[0.5px] dark:border-content1-foreground";
 
   const lang: { [key: string]: JSX.Element } = {
     en: <EnNavIcon className={iconClasses} />,

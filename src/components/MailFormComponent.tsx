@@ -16,7 +16,7 @@ export default function MailForm() {
     base: "data-[has-label=true]:mt-[calc(theme(fontSize.large)_+_16px)]",
     label:
       "text-3xl after:text-inherit pb-1.5 group-data-[filled-within=true]:text-current font-light top-[40%]",
-    inputWrapper: "rounded-[5px] min-h-16 h-16",
+    inputWrapper: "rounded-[5px] min-h-16 h-16 bg-default",
     input:
       "text-lg group-data-[has-value=true]:text-current placeholder:text-current placeholder:italic",
   };
@@ -75,7 +75,7 @@ export default function MailForm() {
           classNames={{
             label:
               "text-3xl after:text-inherit group-data-[filled-within=true]:text-current font-light",
-            inputWrapper: "rounded-[5px]",
+            inputWrapper: "rounded-[5px] bg-default",
             input:
               "text-lg group-data-[has-value=true]:text-current placeholder:text-current placeholder:italic",
           }}
@@ -102,12 +102,11 @@ export default function MailForm() {
           <button
             type="submit"
             className="w-full rounded-[5px]
-                                bg-[#92755F]
+                                bg-content1-foreground
                                 px-5 py-2.5 text-center 
-                                text-sm font-medium text-white 
-                                hover:bg-[#92755F]/[.8] focus:bg-[#92755F]/[.8] focus:outline-none 
+                                text-sm font-medium text-default 
+                                hover:bg-content1-foreground/[.8] focus:bg-content1-foreground/[.8] focus:outline-none 
                                 focus:ring-4
-                                dark:bg-default-100
                                "
           >
             Send
