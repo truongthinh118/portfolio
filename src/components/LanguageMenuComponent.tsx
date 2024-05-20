@@ -19,7 +19,7 @@ interface LanguageMenuProps {
 export default function LanguageMenu(props: LanguageMenuProps) {
   const itemClasses = "flex items-center gap-2";
   const iconClasses =
-    "h-3.5 w-3.5 rounded-full dark:border-[0.5px] dark:border-content1-foreground";
+    "size-5 rounded-full dark:border-[0.5px] dark:border-content1-foreground";
 
   const lang: { [key: string]: JSX.Element } = {
     en: <EnNavIcon className={iconClasses} />,
@@ -37,7 +37,11 @@ export default function LanguageMenu(props: LanguageMenuProps) {
     <>
       <Dropdown aria-label="language menu section" className="min-w-[20px]">
         <DropdownTrigger>
-          <Button className="min-w-min p-4" variant="light" disableRipple>
+          <Button
+            className="h-min min-h-min w-min min-w-min p-3"
+            variant="light"
+            disableRipple
+          >
             {lang[selectedKeys]}
           </Button>
         </DropdownTrigger>

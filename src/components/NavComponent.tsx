@@ -13,7 +13,8 @@ import LanguageMenu from "./LanguageMenuComponent";
 import Image from "next/image";
 import ThemeSwitch from "./ThemeSwitch";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { useInView } from "framer-motion";
 
 export default function Navigator() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,6 +32,9 @@ export default function Navigator() {
     { name: "Contact", href: "/contact", key: "contact" },
   ];
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <Navbar
       isMenuOpen={isMenuOpen}
@@ -40,6 +44,12 @@ export default function Navigator() {
         wrapper: "max-w-full",
       }}
       isBlurred
+      ref={ref}
+      style={{
+        transform: isInView ? "none" : "translateY(-100%)",
+        opacity: isInView ? 1 : 0,
+        transition: "all 0.5s ease-in-out 0s",
+      }}
     >
       <NavbarBrand>
         <Link href={"/"} className="relative h-12 w-24">
@@ -69,11 +79,13 @@ export default function Navigator() {
 
       <NavbarContent className="sm:hidden" justify="end">
         <NavbarItem>
-          <ThemeSwitch />
-        </NavbarItem>
-        <NavbarItem>
           <LanguageMenu lang="en" />
         </NavbarItem>
+
+        <NavbarItem>
+          <ThemeSwitch />
+        </NavbarItem>
+
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         />

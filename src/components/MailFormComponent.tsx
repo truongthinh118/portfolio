@@ -16,7 +16,8 @@ export default function MailForm() {
     base: "data-[has-label=true]:mt-[calc(theme(fontSize.large)_+_16px)]",
     label:
       "text-3xl after:text-inherit pb-1.5 group-data-[filled-within=true]:text-current font-light top-[40%]",
-    inputWrapper: "rounded-[5px] min-h-16 h-16 bg-default",
+    inputWrapper:
+      "rounded-[5px] min-h-16 h-16 bg-default dark:group-data-[focus=true]:bg-default",
     input:
       "text-lg group-data-[has-value=true]:text-current placeholder:text-current placeholder:italic",
   };
