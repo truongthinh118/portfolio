@@ -13,7 +13,7 @@ export default function DesktopHomePage() {
     <>
       <main
         ref={ref}
-        className={`relative hidden grid-cols-7 grid-rows-5 gap-2.5 bg-default p-2.5 lg:grid`}
+        className="relative hidden grid-cols-7 grid-rows-5 gap-2.5 bg-default p-2.5 lg:grid"
         style={{ minHeight: "calc(100vh - 4rem)" }}
       >
         <div

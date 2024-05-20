@@ -21,7 +21,7 @@ const experienceData: ExperienceProps[] = [
     company: "Aladin",
     role: "Backend Developer",
     duration: "Nov 2021 - Oct 2022",
-    logo: "/aladin.svg",
+    logo: "/aladin-logo.svg",
     href: "https://aladin.finance/",
     description:
       "A platform connecting the community of professional consultants.",

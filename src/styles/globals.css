@@ -79,3 +79,13 @@ header {
 .exp-card-back {
   transform: rotateY(180deg);
 }
+
+.project h2 {
+  font-weight: 700;
+}
+.project span {
+  font-weight: 700;
+}
+.project span p {
+  font-weight: 300;
+}
