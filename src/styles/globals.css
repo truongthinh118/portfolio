@@ -81,11 +81,19 @@ header {
 }
 
 .project h2 {
+  font-size: clamp(1.563rem, 1.439vw + 1.266rem, 2.813rem);
   font-weight: 700;
 }
 .project span {
+  font-size: clamp(1rem, 0.576vw + 0.881rem, 1.5rem);
+  line-height: clamp(normal, 0.576vw + 0.881rem, 2rem);
   font-weight: 700;
 }
 .project span p {
   font-weight: 300;
+}
+
+.project-inner .project-title {
+  font-size: clamp(2.5rem, 3.237vw + 1.832rem, 5.313rem);
+  font-weight: 700;
 }

@@ -25,7 +25,7 @@ export default function Preloader() {
           onAnimationComplete={() => showContent()}
         >
           <motion.img
-            src="logo.svg"
+            src="/logo.svg"
             className="h-3/4"
             initial={{ clipPath: "inset(50% 0 50% 0)" }}
             animate={{ clipPath: "inset(0)" }}

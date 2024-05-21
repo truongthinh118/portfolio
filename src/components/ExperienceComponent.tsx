@@ -1,17 +1,18 @@
 "use client";
 import { Button, Card, CardBody, Link } from "@nextui-org/react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { useState } from "react";
 import { UserIcon } from "./icon/UserIcon";
 import { CalendarIcon } from "./icon/CalendarIcon";
 import { font } from "@/styles/font";
+import AladinIcon from "./icon/AladinIcon";
+import ViCKIcon from "./icon/VickIcon";
 
 type ExperienceProps = {
   company: string;
   role: string;
   duration: string;
-  logo: string;
+  logo: React.ReactElement;
   href: string;
   description: string;
 };
@@ -21,7 +22,7 @@ const experienceData: ExperienceProps[] = [
     company: "Aladin",
     role: "Backend Developer",
     duration: "Nov 2021 - Oct 2022",
-    logo: "/aladin-logo.svg",
+    logo: <AladinIcon className="p-2" />,
     href: "https://aladin.finance/",
     description:
       "A platform connecting the community of professional consultants.",
@@ -30,7 +31,7 @@ const experienceData: ExperienceProps[] = [
     company: "ViCK",
     role: "Software Engineer",
     duration: "Oct 2022 - Present",
-    logo: "/vick.svg",
+    logo: <ViCKIcon className="p-2" />,
     href: "https://vick.vn/",
     description:
       "VICK stands as a pioneer among Vietnam’s stock market enterprises, offering exclusive Expert Consulting/Investment Advisory services tailored for individual investors.",
@@ -113,7 +114,7 @@ function ExperienceInfomation({
           as={Link}
           isExternal
         >
-          <Image className="p-2" src={item.logo} alt={item.company} fill />
+          {item.logo}
         </Button>
 
         <div className="flex h-full flex-col justify-evenly">
