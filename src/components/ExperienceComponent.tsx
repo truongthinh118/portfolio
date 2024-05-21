@@ -22,7 +22,7 @@ const experienceData: ExperienceProps[] = [
     company: "Aladin",
     role: "Backend Developer",
     duration: "Nov 2021 - Oct 2022",
-    logo: <AladinIcon className="p-2" />,
+    logo: <AladinIcon className="size-full p-2" />,
     href: "https://aladin.finance/",
     description:
       "A platform connecting the community of professional consultants.",
@@ -31,7 +31,7 @@ const experienceData: ExperienceProps[] = [
     company: "ViCK",
     role: "Software Engineer",
     duration: "Oct 2022 - Present",
-    logo: <ViCKIcon className="p-2" />,
+    logo: <ViCKIcon className="size-full p-2" />,
     href: "https://vick.vn/",
     description:
       "VICK stands as a pioneer among Vietnam’s stock market enterprises, offering exclusive Expert Consulting/Investment Advisory services tailored for individual investors.",

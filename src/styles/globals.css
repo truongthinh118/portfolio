@@ -57,9 +57,6 @@ header {
   font-weight: 300;
 }
 
-.introduction-icon {
-}
-
 /* 
 .exp-card,
 .exp-card-front {
@@ -67,16 +64,15 @@ header {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 } */
 
-.exp-card:hover {
-  transform: rotateY(180deg);
-}
-
 .exp-card-front,
 .exp-card-back {
   -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .exp-card-back {
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
