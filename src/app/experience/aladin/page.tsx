@@ -39,13 +39,13 @@ export default function AladinPage() {
               </div>
 
               <Button
-                className="h-16 min-h-16 min-w-max bg-neutral-100 sm:h-24 sm:min-h-24 md:h-48 md:min-h-48 md:min-w-full"
+                className="h-16 min-h-16 min-w-max max-w-max bg-neutral-100 sm:h-24 sm:min-h-24 md:h-48 md:min-h-48 md:min-w-full"
                 isIconOnly
                 href="https://aladin.finance/"
                 as={Link}
                 target="_blank"
               >
-                <AladinIcon className="size-full p-2" />
+                <AladinIcon className="h-full w-auto p-2" />
               </Button>
             </section>
 

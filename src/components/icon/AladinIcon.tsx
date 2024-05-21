@@ -5,7 +5,7 @@ export default function AladinIcon(props: SVGProps<SVGSVGElement>) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      //   style="isolation:isolate"
+      style={{ isolation: "isolate" }}
       viewBox="53.85 39.64 600.77 442.23"
       width="600.77"
       height="442.23"
