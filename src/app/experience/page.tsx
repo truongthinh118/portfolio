@@ -1,5 +1,11 @@
 import { font } from "@/styles/font";
 import ExperienceComponent from "@/components/ExperienceComponent";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Truong Thinh Experience",
+  description: "Truong Thinh Portfolio",
+};
 
 export default function ExperiencePage() {
   return (

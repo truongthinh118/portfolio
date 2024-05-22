@@ -1,5 +1,5 @@
 import { font } from "@/styles/font";
-import ContactMethodComponent from "../ContactMethodComponent";
+import ContactMethodComponent from "../contact/ContactMethodComponent";
 import { Divider } from "@nextui-org/react";
 import AvatarComponent from "./AvatarComponent";
 import IntroductionComponent from "./IntroductionComponent";

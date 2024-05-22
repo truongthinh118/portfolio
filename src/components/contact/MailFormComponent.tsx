@@ -2,10 +2,12 @@
 import { useState, useMemo } from "react";
 import { Input, Textarea } from "@nextui-org/react";
 import sendMail from "@/actions/SendMail";
-import { UserIcon } from "./icon/UserIcon";
-import EnvelopeIcon from "./icon/EnvelopeIcon";
+import { UserIcon } from "../icon/UserIcon";
+import EnvelopeIcon from "../icon/EnvelopeIcon";
 import ContactMethodComponent from "./ContactMethodComponent";
 import Link from "next/link";
+import SubmitButtonComponent from "./SubmitButtonComponent";
+import { toast } from "sonner";
 
 export default function MailForm() {
   const [name, setName] = useState("");
@@ -34,10 +36,11 @@ export default function MailForm() {
   return (
     <>
       <form
-        onSubmit={(e) => {
-          e.preventDefault();
+        action={async () => {
           validateEmail(address);
-          sendMail(name, address, message);
+          const res = await sendMail(name, address, message);
+          if (res && !!res.result) toast.success("Message sent successfully.");
+          else toast.error(res?.errorMsg);
         }}
         className="flex flex-col gap-8 p-8"
       >
@@ -76,7 +79,8 @@ export default function MailForm() {
           classNames={{
             label:
               "text-3xl after:text-inherit group-data-[filled-within=true]:text-current font-light",
-            inputWrapper: "rounded-[5px] bg-default",
+            inputWrapper:
+              "rounded-[5px] bg-default dark:group-data-[focus=true]:bg-default",
             input:
               "text-lg group-data-[has-value=true]:text-current placeholder:text-current placeholder:italic",
           }}
@@ -100,18 +104,7 @@ export default function MailForm() {
           <div className="lg:hidden">
             <ContactMethodComponent />
           </div>
-          <button
-            type="submit"
-            className="w-full rounded-[5px]
-                                bg-content1-foreground
-                                px-5 py-2.5 text-center 
-                                text-sm font-medium text-default 
-                                hover:bg-content1-foreground/[.8] focus:bg-content1-foreground/[.8] focus:outline-none 
-                                focus:ring-4
-                               "
-          >
-            Send
-          </button>
+          <SubmitButtonComponent />
         </div>
       </form>
     </>

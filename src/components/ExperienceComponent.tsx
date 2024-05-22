@@ -23,7 +23,7 @@ const experienceData: ExperienceProps[] = [
     role: "Backend Developer",
     duration: "Nov 2021 - Oct 2022",
     logo: <AladinIcon className="size-full p-2" />,
-    href: "https://aladin.finance/",
+    href: "/experience/aladin",
     description:
       "A platform connecting the community of professional consultants.",
   },
@@ -32,7 +32,7 @@ const experienceData: ExperienceProps[] = [
     role: "Software Engineer",
     duration: "Oct 2022 - Present",
     logo: <ViCKIcon className="size-full p-2" />,
-    href: "https://vick.vn/",
+    href: "/experience/vick",
     description:
       "VICK stands as a pioneer among Vietnam’s stock market enterprises, offering exclusive Expert Consulting/Investment Advisory services tailored for individual investors.",
   },
@@ -54,7 +54,7 @@ function ExperienceCard({ item }: { item: ExperienceProps }) {
     <motion.div
       className="h-[45%] w-4/5 md:w-3/5 lg:h-4/5 lg:w-[45%] xl:h-full 2xl:w-2/5"
       transition={{ duration: 0.7 }}
-      animate={{ rotateY: flip ? 0 : 180 }}
+      animate={{ rotateY: flip ? "0deg" : "180deg" }}
     >
       <Card
         className="size-full justify-center bg-background text-content1-foreground"

@@ -42,7 +42,7 @@ export default function ImageModalComponent({
         size="full"
         classNames={{
           base: "bg-transparent justify-center items-center",
-          closeButton: "z-10 mt-12 mr-12",
+          closeButton: "z-10 text-4xl m-4",
         }}
       >
         <ModalContent>

@@ -1,11 +1,16 @@
-"use client";
 import Image from "next/image";
 import { Button } from "@nextui-org/react";
 import { UserIcon } from "@/components/icon/UserIcon";
 import { CalendarIcon } from "@/components/icon/CalendarIcon";
 import Link from "next/link";
-import ImageModalComponent from "@/components/project/ImageModal";
+import ImageModalComponent from "@/components/project/ImageModalComponent";
 import AladinIcon from "@/components/icon/AladinIcon";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Aladin Projects",
+  description: "Truong Thinh Portfolio",
+};
 
 export default function AladinPage() {
   return (

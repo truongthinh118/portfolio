@@ -1,13 +1,17 @@
 import emailjs from "@emailjs/browser";
-import { toast } from "sonner";
 
-export default function sendMail(
+type SendMailResult = {
+  result: boolean;
+  errorMsg?: string;
+};
+
+export default async function sendMail(
   name: string,
   address: string,
   message: string,
-) {
+): Promise<SendMailResult | undefined> {
   if (name && address && message) {
-    emailjs
+    return emailjs
       .send(
         "service_uqp42mn",
         "template_cam0i4u",
@@ -19,11 +23,11 @@ export default function sendMail(
       )
       .then(
         () => {
-          toast.success("Message sent successfully.");
+          return { result: true };
         },
         (error) => {
           const errorMsg = error.text;
-          toast.error(errorMsg);
+          return { result: false, errorMsg };
         },
       );
   }

@@ -51,7 +51,7 @@ const config: Config = {
         },
         dark: {
           colors: {
-            foreground: "#DBD8E3",
+            foreground: "#FEFAF6",
             background: "#352F44",
             default: {
               DEFAULT: "#2A2438",
@@ -65,10 +65,10 @@ const config: Config = {
               700: "#352f44",
               800: "#2a2438",
               900: "#0d0a16",
-              foreground: "#DBD8E3",
+              foreground: "#FEFAF6",
             },
             content1: {
-              foreground: "#FEFAF6",
+              foreground: "#DBD8E3",
             },
             content2: {
               foreground: "#DBD8E3",

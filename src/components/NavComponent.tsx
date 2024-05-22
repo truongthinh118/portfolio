@@ -65,7 +65,10 @@ export default function Navigator() {
 
       <NavbarContent className="hidden gap-8 sm:flex" justify="end">
         {menuItems.map((item) => (
-          <NavbarItem key={item.key} isActive={item.href == location}>
+          <NavbarItem
+            key={item.key}
+            isActive={location.startsWith(item.href) && location != "/"}
+          >
             <Link href={item.href}>{item.name}</Link>
           </NavbarItem>
         ))}
@@ -96,7 +99,7 @@ export default function Navigator() {
           <NavbarMenuItem
             key={item.key}
             onClick={() => setIsMenuOpen(false)}
-            isActive={item.href == location}
+            isActive={location.startsWith(item.href) && location != "/"}
           >
             <Link href={item.href}>{item.name}</Link>
           </NavbarMenuItem>

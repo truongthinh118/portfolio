@@ -1,4 +1,4 @@
-import ContactMethodComponent from "./ContactMethodComponent";
+import ContactMethodComponent from "./contact/ContactMethodComponent";
 import SkillsComponent from "./SkillComponent";
 import { Divider } from "@nextui-org/react";
 import AvatarComponent from "./home/AvatarComponent";
