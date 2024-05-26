@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import AladinIcon from "./icon/AladinIcon";
 import ViCKIcon from "./icon/VickIcon";
-import { font } from "@/styles/font";
+import { font } from "@/assets/font";
 import Image from "next/image";
 
 const ProjectSlider = () => {

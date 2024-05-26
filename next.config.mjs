@@ -4,7 +4,7 @@ const nextConfig = {
     return [
       {
         source: "/resume",
-        destination: `/cv.pdf`,
+        destination: "/cv.pdf",
       },
     ];
   },

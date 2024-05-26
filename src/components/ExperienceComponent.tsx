@@ -1,7 +1,7 @@
 import { Button, Card, CardBody } from "@nextui-org/react";
 import { UserIcon } from "./icon/UserIcon";
 import { CalendarIcon } from "./icon/CalendarIcon";
-import { font } from "@/styles/font";
+import { font } from "@/assets/font";
 import AladinIcon from "./icon/AladinIcon";
 import ViCKIcon from "./icon/VickIcon";
 import Link from "next/link";

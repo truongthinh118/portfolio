@@ -1,4 +1,4 @@
-import { font } from "@/styles/font";
+import { font } from "@/assets/font";
 import ContactMethodComponent from "../contact/ContactMethodComponent";
 import { Divider } from "@nextui-org/react";
 import AvatarComponent from "./AvatarComponent";

@@ -1,4 +1,4 @@
-import { font } from "@/styles/font";
+import { font } from "@/assets/font";
 import { Metadata } from "next";
 import ProjectSlider from "@/components/ProjectSlider";
 
