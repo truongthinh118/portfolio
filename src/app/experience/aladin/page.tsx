@@ -6,6 +6,7 @@ import Link from "next/link";
 import ImageModalComponent from "@/components/project/ImageModalComponent";
 import AladinIcon from "@/components/icon/AladinIcon";
 import { Metadata } from "next";
+import DownloadAppComponent from "@/components/DownloadAppComponent";
 
 export const metadata: Metadata = {
   title: "Aladin Projects",
@@ -53,7 +54,7 @@ export default function AladinPage() {
                 <AladinIcon className="h-full w-auto p-2" />
               </Button>
             </section>
-
+            <DownloadAppComponent />
             {/* <section className="project-inner flex flex-col gap-2"> */}
             <div className="project">
               <h2 className="my-4 text-left text-content1-foreground">
@@ -74,7 +75,7 @@ export default function AladinPage() {
                 defaultSelected="/aladin.png"
               >
                 <Button
-                  className="mt-4 h-48 w-[95%] rounded-xl border-8 border-content1-foreground bg-content1-foreground md:h-96 md:w-[50%] md:border-[15px]"
+                  className="mt-4 h-48 w-[95%] rounded-xl border-8 border-content1-foreground bg-content1-foreground max-lg:mx-auto max-lg:flex md:h-96 md:border-[15px] lg:w-[50%]"
                   isIconOnly
                 >
                   <Image

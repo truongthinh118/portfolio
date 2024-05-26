@@ -24,8 +24,7 @@ export default function HomeMobilePage() {
             <div className="absolute z-10 size-36">
               <AvatarComponent className="size-full border-[0.5px] border-[#7A7673]" />
             </div>
-            <div className="relative ml-[4.5rem] h-full w-[calc(100%-4.5rem)]">
-              <span className="absolute z-0 size-full rounded-r-xl bg-[url('/background-2.jpeg')] bg-cover bg-[center_bottom_20%] bg-no-repeat opacity-30" />
+            <div className="welcome-banner relative ml-[4.5rem] h-full w-[calc(100%-4.5rem)] overflow-hidden rounded-r-xl">
               <div className="flex size-full py-2 pl-[4.5rem]">
                 <div className="mx-auto flex flex-col items-center justify-between">
                   <article className="z-10 text-center">

@@ -20,6 +20,16 @@ export default function Navigator() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = usePathname();
 
+  const isActive = (href: string) => {
+    console.log("href ", href);
+    console.log("location ", location);
+    if (href === "/" && location === "/") return true;
+
+    if (href !== "/" && location !== "/") return location.startsWith(href);
+
+    return false;
+  };
+
   type menuItem = {
     key: string;
     name: string;
@@ -27,8 +37,8 @@ export default function Navigator() {
   };
 
   const menuItems: menuItem[] = [
+    { name: "Home", href: "/", key: "home" },
     { name: "Experience", href: "/experience", key: "experience" },
-    { name: "Projects", href: "/projects", key: "project" },
     { name: "Contact", href: "/contact", key: "contact" },
   ];
 
@@ -65,10 +75,7 @@ export default function Navigator() {
 
       <NavbarContent className="hidden gap-8 sm:flex" justify="end">
         {menuItems.map((item) => (
-          <NavbarItem
-            key={item.key}
-            isActive={location.startsWith(item.href) && location != "/"}
-          >
+          <NavbarItem key={item.key} isActive={isActive(item.href)}>
             <Link href={item.href}>{item.name}</Link>
           </NavbarItem>
         ))}

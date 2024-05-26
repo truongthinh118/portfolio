@@ -28,7 +28,7 @@ export default function LanguageMenu(props: LanguageMenuProps) {
 
   const pathname = usePathname();
   useEffect(() => {
-    console.log(pathname);
+    // console.log(pathname);
   });
 
   const [selectedKeys, setSelectedKeys] = useState("en");
