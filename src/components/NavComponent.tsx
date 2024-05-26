@@ -21,8 +21,6 @@ export default function Navigator() {
   const location = usePathname();
 
   const isActive = (href: string) => {
-    console.log("href ", href);
-    console.log("location ", location);
     if (href === "/" && location === "/") return true;
 
     if (href !== "/" && location !== "/") return location.startsWith(href);
@@ -106,7 +104,7 @@ export default function Navigator() {
           <NavbarMenuItem
             key={item.key}
             onClick={() => setIsMenuOpen(false)}
-            isActive={location.startsWith(item.href) && location != "/"}
+            isActive={isActive(item.href)}
           >
             <Link href={item.href}>{item.name}</Link>
           </NavbarMenuItem>
