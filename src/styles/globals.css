@@ -25,6 +25,10 @@ header {
   color: hsl(var(--nextui-content3-foreground));
 }
 
+main {
+  min-height: calc(100vh - 4rem);
+}
+
 .profile-card {
   display: flex;
   flex-direction: column;
@@ -57,12 +61,49 @@ header {
   font-weight: 300;
 }
 
+.project-wrapper .project-title {
+  font-size: clamp(2.5rem, 3.237vw + 1.832rem, 5.313rem);
+  font-weight: 700;
+}
+
+.project-inner .project:not(:first-child) {
+  margin-top: 1rem;
+}
+/* 
+.project:has(.project-gallery):nth-of-type(even) > .project-gallery {
+  float: right;
+}
+.project:has(.project-gallery):nth-of-type(odd) > .project-gallery {
+  float: left;
+}
+
+.project:has(.project-gallery):nth-of-type(1) > .project-gallery {
+  float: unset;
+} */
+/* 
+.project-inner .project-gallery:nth-of-type(2) {
+  background-color: pink;
+}
+.project-inner .project-gallery:nth-of-type(1) {
+  background-color: greenyellow;
+} */
+
+/* 
+.project-inner > .project:nth-child(odd):has(.project-gallery) {
+  background-color: greenyellow;
+}
+
+.project-inner > .project:nth-child(even):has(.project-gallery) {
+  background-color: red;
+} */
+
 .project h2 {
   font-size: clamp(1.563rem, 1.439vw + 1.266rem, 2.813rem);
   font-weight: 700;
+  text-align: left;
 }
 .project span {
-  font-size: clamp(1rem, 0.576vw + 0.881rem, 1.5rem);
+  font-size: clamp(1rem, 0.537vw + 0.856rem, 1.5rem);
   line-height: clamp(normal, 0.576vw + 0.881rem, 2rem);
   font-weight: 700;
 }
@@ -70,14 +111,9 @@ header {
   font-weight: 300;
 }
 
-.project-inner .project-title {
-  font-size: clamp(2.5rem, 3.237vw + 1.832rem, 5.313rem);
-  font-weight: 700;
-}
-
 /* card */
 
-.toggle {
+/* .toggle {
   opacity: 0;
   width: 0;
   height: 0;
@@ -102,7 +138,7 @@ header {
 }
 .flip-card__back {
   transform: rotateY(180deg);
-}
+} */
 
 .welcome-banner::before {
   width: 100%;

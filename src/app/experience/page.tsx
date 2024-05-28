@@ -12,7 +12,6 @@ export default function ExperiencePage() {
     <>
       <main
         className={`${font.poppins.className} grid grid-rows-11 bg-default`}
-        style={{ minHeight: "calc(100vh - 4rem)" }}
       >
         <div className="row-span-2 flex lg:row-span-3">
           <h1 className="m-auto py-12 text-[clamp(2.813rem,3.208vw+2.151rem,6rem)] font-semibold leading-none">

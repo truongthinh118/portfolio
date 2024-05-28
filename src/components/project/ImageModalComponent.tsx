@@ -63,7 +63,14 @@ export default function ImageModalComponent({
                 {gallery.map((item) => (
                   <Tab
                     key={item}
-                    title={<Image src={item} alt="" fill></Image>}
+                    title={
+                      <Image
+                        src={item}
+                        alt=""
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      ></Image>
+                    }
                   >
                     <ModalBody className="relative h-[25dvh] w-[90svw] min-w-[60dvw] p-0 lg:h-[60dvh] lg:max-w-5xl">
                       <Image

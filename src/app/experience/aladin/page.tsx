@@ -1,11 +1,11 @@
+import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@nextui-org/react";
 import { UserIcon } from "@/components/icon/UserIcon";
 import { CalendarIcon } from "@/components/icon/CalendarIcon";
-import Link from "next/link";
-import ImageModalComponent from "@/components/project/ImageModalComponent";
 import AladinIcon from "@/components/icon/AladinIcon";
-import { Metadata } from "next";
+import ImageModalComponent from "@/components/project/ImageModalComponent";
 import DownloadAppComponent from "@/components/DownloadAppComponent";
 
 export const metadata: Metadata = {
@@ -16,11 +16,8 @@ export const metadata: Metadata = {
 export default function AladinPage() {
   return (
     <>
-      <main
-        className="container mx-auto my-16"
-        style={{ minHeight: "calc(100vh - 4rem)" }}
-      >
-        <fieldset className="project-inner rounded-[5px] border border-foreground">
+      <main className="container mx-auto my-16">
+        <fieldset className="project-wrapper rounded-[5px] border border-foreground">
           <legend className="project-title ml-4 px-1 sm:ml-16">
             <Link href={"https://aladin.finance/"} target="_blank">
               Aladin Finance
@@ -53,92 +50,97 @@ export default function AladinPage() {
               >
                 <AladinIcon className="h-full w-auto p-2" />
               </Button>
+              <DownloadAppComponent
+                googleLink="https://play.google.com/store/apps/details?id=com.aladinmobile.aladin"
+                appleLink="https://apps.apple.com/us/app/aladin-finance/id1474783146"
+                className="mt-2 w-full justify-evenly max-md:hidden"
+              />
             </section>
-            <DownloadAppComponent />
-            {/* <section className="project-inner flex flex-col gap-2"> */}
-            <div className="project">
-              <h2 className="my-4 text-left text-content1-foreground">
-                Automated news aggregation system
-              </h2>
-              <span className="text-2xl">
-                My responsibility:
-                <p>
-                  Build an automated news aggregation system from multiple
-                  sources for efficiently processing and storing data to save
-                  time and effort.{" "}
-                </p>
-                Team size: 2
-              </span>
-              <br />
-              <ImageModalComponent
-                gallery={["/aladin.png"]}
-                defaultSelected="/aladin.png"
+
+            <DownloadAppComponent
+              googleLink="https://play.google.com/store/apps/details?id=com.aladinmobile.aladin"
+              appleLink="https://apps.apple.com/us/app/aladin-finance/id1474783146"
+              className="md:hidden"
+            >
+              <Button
+                as={Link}
+                href={"https://aladin.finance/"}
+                className="h-12 w-full bg-default-foreground sm:h-14"
               >
-                <Button
-                  className="mt-4 h-48 w-[95%] rounded-xl border-8 border-content1-foreground bg-content1-foreground max-lg:mx-auto max-lg:flex md:h-96 md:border-[15px] lg:w-[50%]"
-                  isIconOnly
+                <AladinIcon className="h-full" />
+              </Button>
+            </DownloadAppComponent>
+
+            <section className="project-inner clear-left">
+              <div className="project">
+                <h2 className="text-content1-foreground">
+                  Automated news aggregation system
+                </h2>
+                <span className="text-2xl">
+                  My responsibility:
+                  <p>
+                    Build an automated news aggregation system from multiple
+                    sources for efficiently processing and storing data to save
+                    time and effort.{" "}
+                  </p>
+                  Team size: 2
+                </span>
+                <br />
+                <ImageModalComponent
+                  gallery={["/aladin.png"]}
+                  defaultSelected="/aladin.png"
                 >
-                  <Image
-                    src={"/aladin.png"}
-                    fill
-                    alt=""
-                    className="rounded-lg"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    priority
-                  />
-                </Button>
-              </ImageModalComponent>
-            </div>
+                  <Button
+                    className="mt-4 h-48 w-[95%] rounded-xl border-8 border-content1-foreground bg-content1-foreground max-lg:mx-auto max-lg:flex md:h-96 md:border-[15px] lg:w-1/2"
+                    isIconOnly
+                  >
+                    <Image
+                      src={"/aladin.png"}
+                      fill
+                      alt=""
+                      className="rounded-lg"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      priority
+                    />
+                  </Button>
+                </ImageModalComponent>
+              </div>
 
-            <div className="project">
-              <h2 className="my-4 text-left text-content1-foreground md:text-5xl">
-                Automatically synchronize data
-              </h2>
-              <span className="text-2xl">
-                My responsibility:
-                <p>
-                  Develop an application to automatically synchronize data from
-                  CRM applications to improve customer satisfaction.
-                </p>
-                Team size: 2
-              </span>
-            </div>
+              <div className="project">
+                <h2 className="text-content1-foreground">
+                  Automatically synchronize data
+                </h2>
+                <span className="text-2xl">
+                  My responsibility:
+                  <p>
+                    Develop an application to automatically synchronize data
+                    from CRM applications to improve customer satisfaction.
+                  </p>
+                  Team size: 2
+                </span>
+              </div>
 
-            <div className="project">
-              <h2 className="my-4 text-left text-content1-foreground md:text-5xl">
-                Automatically synchronize data
-              </h2>
-              <span className="text-2xl">
-                My responsibility:
-                <p>
-                  Develop an application to automatically synchronize data from
-                  CRM applications to improve customer satisfaction.
-                </p>
-                Team size: 2
-              </span>
-            </div>
-
-            <div className="project">
-              <h2 className="my-4 text-left text-content1-foreground md:text-5xl">
-                Trading System Platform
-              </h2>
-              <span className="text-2xl">
-                My responsibility:
-                <p>
-                  Provide to professional investors a platform for managing the
-                  securities account portfolios entrusted by clients.
-                  <br />
-                  Create great experience to customer by simultaneously making
-                  orders on several securities accounts entrusted by clients
-                  from numerous securities companies.
-                  <br />
-                  Calculate customer profit and loss, commissions and trading
-                  fee for investors.
-                </p>
-                Team size: 3
-              </span>
-            </div>
-            {/* </section> */}
+              <div className="project">
+                <h2 className="text-content1-foreground">
+                  Trading System Platform
+                </h2>
+                <span className="text-2xl">
+                  My responsibility:
+                  <p>
+                    Provide to professional investors a platform for managing
+                    the securities account portfolios entrusted by clients.
+                    <br />
+                    Create great experience to customer by simultaneously making
+                    orders on several securities accounts entrusted by clients
+                    from numerous securities companies.
+                    <br />
+                    Calculate customer profit and loss, commissions and trading
+                    fee for investors.
+                  </p>
+                  Team size: 3
+                </span>
+              </div>
+            </section>
           </article>
         </fieldset>
       </main>

@@ -11,10 +11,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main
-      className="container mx-auto flex flex-col gap-8 px-8 py-16"
-      style={{ minHeight: "calc(100vh - 4rem)" }}
-    >
+    <main className="container mx-auto flex flex-col gap-8 px-8 py-16">
       <span className="w-min text-[3.5rem] font-bold leading-none sm:text-8xl">
         For further cooperation!
       </span>
