@@ -12,7 +12,7 @@ export default function ExperienceIntoduction({
   data: experienceDataProps;
 }) {
   const mainLogo = React.cloneElement(data.logo, {
-    className: "h-full w-auto p-2",
+    className: "h-auto w-[25vw] p-2",
   });
 
   const sideLogo = React.cloneElement(data.logo, {
@@ -20,25 +20,28 @@ export default function ExperienceIntoduction({
   });
   return (
     <>
-      <div className="flex flex-row-reverse items-center justify-between gap-1 pb-4 md:flex-col">
-        <div className="flex h-full flex-col justify-evenly">
-          <div className="flex flex-row items-center gap-2 lg:gap-4">
-            <UserIcon className="h-3 fill-current text-current sm:h-10 sm:p-2" />
-            <span className="text-sm font-light xs:text-lg 2xl:text-2xl ">
-              Role: {data.role}
-            </span>
-          </div>
-
-          <div className="flex flex-row items-center gap-2 lg:gap-4">
-            <CalendarIcon className="h-3 fill-current text-current sm:h-10 sm:p-2" />
-            <span className="text-sm font-light xs:text-lg  2xl:text-2xl">
-              Duration: {data.duration}
-            </span>
-          </div>
-        </div>
+      <div className="flex flex-row-reverse items-center justify-between gap-2 pb-4 md:flex-col md:gap-1">
+        <table className="w-full table-auto">
+          <tbody className="text-sm font-light xs:text-lg  2xl:text-2xl">
+            <tr>
+              <td className="flex items-center gap-2">
+                <UserIcon className="h-5 fill-current text-current sm:h-10 sm:p-2" />
+                <span className="">Role: </span>
+              </td>
+              <td className="w-max text-left">{data.role}</td>
+            </tr>
+            <tr>
+              <td className="flex items-center gap-2">
+                <CalendarIcon className="h-5 fill-current text-current sm:h-10 sm:p-2" />
+                <span className="">Duration: </span>
+              </td>
+              <td className="text-left">{data.duration}</td>
+            </tr>
+          </tbody>
+        </table>
 
         <Button
-          className="h-16 min-h-16 min-w-max max-w-max bg-neutral-100 sm:h-24 sm:min-h-24 md:h-48 md:min-h-48 md:min-w-full"
+          className="h-16 min-h-16 bg-neutral-100 max-md:min-w-[25%] sm:h-24 sm:min-h-24 md:h-48 md:min-h-48 md:min-w-full"
           isIconOnly
           href={data.web}
           as={Link}
@@ -60,7 +63,7 @@ export default function ExperienceIntoduction({
         <Button
           as={Link}
           href={"https://aladin.finance/"}
-          className="h-12 w-full bg-default-foreground sm:h-14"
+          className="h-12 w-max bg-default-foreground max-sm:hidden sm:h-14"
         >
           {sideLogo}
         </Button>

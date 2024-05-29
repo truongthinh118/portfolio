@@ -80,7 +80,7 @@ export const experienceData: { [key: string]: experienceDataProps } = {
           "Developed a companion e-wallet for convenient fund management and seamless transactions within the platform.",
         ],
         teamsize: "3",
-        imageGallery: ["/s-wallet.png"],
+        imageGallery: ["/s-wallet.png", "/aladin.png"],
       },
       {
         name: "Chatify - a real-time chat application",

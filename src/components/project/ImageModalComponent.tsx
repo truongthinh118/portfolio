@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import {
+  Button,
   ButtonProps,
   Modal,
   ModalBody,
@@ -10,17 +11,22 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import React from "react";
+import { twMerge } from "tailwind-merge";
 
-type ImageModalComponentProps = {
+interface ImageModalComponentProps extends ButtonProps {
   gallery: string[];
   defaultSelected: string;
-  children: React.ReactElement<ButtonProps>;
-};
+  isFloat: boolean;
+  floatPosition?: string;
+}
 
 export default function ImageModalComponent({
   gallery,
   defaultSelected,
-  children,
+  className,
+  isFloat,
+  floatPosition,
+  ...props
 }: ImageModalComponentProps) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
@@ -28,21 +34,42 @@ export default function ImageModalComponent({
     defaultSelected,
   );
 
-  const trigger = React.cloneElement(children, {
-    onPress: onOpen,
-  });
-
   return (
     <>
-      {trigger}
+      <Button
+        className={twMerge(
+          `
+            m-4 h-fit w-fit
+            rounded-xl border-8 border-content1-foreground bg-content1-foreground
+            max-lg:mx-auto max-lg:flex md:border-[15px] 
+            ${isFloat ? (floatPosition === "left" ? "lg:float-left lg:max-w-[45%]" : "lg:float-right lg:max-w-[45%]") : ""}
+          `,
+          className,
+        )}
+        isIconOnly
+        onPress={onOpen}
+        {...props}
+      >
+        <Image
+          src={defaultSelected}
+          // fill
+          alt=""
+          className="size-auto max-h-[80svh] rounded-lg"
+          width="0"
+          height="0"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          priority
+        />
+      </Button>
       <Modal
         isOpen={isOpen}
         onOpenChange={onOpenChange}
+        placement="center"
         backdrop="blur"
-        size="full"
+        size="5xl"
         classNames={{
-          base: "bg-transparent justify-center items-center",
-          closeButton: "z-10 text-4xl m-4",
+          base: "bg-transparent justify-center items-center shadow-none	",
+          closeButton: "fixed top-0 right-0 z-10 text-4xl m-4",
         }}
       >
         <ModalContent>
@@ -52,10 +79,11 @@ export default function ImageModalComponent({
                 placement="bottom"
                 variant="light"
                 classNames={{
-                  base: `absolute bottom-4 left-1/2 -translate-x-1/2 ${gallery.length <= 1 ? "hidden" : ""}`,
+                  base: `fixed bottom-4 left-1/2 -translate-x-1/2 ${gallery.length <= 1 ? "hidden" : ""}`,
                   tabList: "h-max",
                   tab: "h-max w-max",
                   tabContent: "h-16 w-16",
+                  wrapper: "w-full",
                 }}
                 selectedKey={selected}
                 onSelectionChange={setSelected}
@@ -72,7 +100,7 @@ export default function ImageModalComponent({
                       ></Image>
                     }
                   >
-                    <ModalBody className="relative h-[25dvh] w-[90svw] min-w-[60dvw] p-0 lg:h-[60dvh] lg:max-w-5xl">
+                    <ModalBody className="relative h-[75dvh] w-full p-0">
                       <Image
                         src={item}
                         fill

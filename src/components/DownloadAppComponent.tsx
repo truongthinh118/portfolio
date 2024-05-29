@@ -38,16 +38,6 @@ export default function DownloadAppComponent({
           </Button>
         )}
 
-        {/* <Button className="flex h-12 max-w-48 items-center justify-center gap-2 rounded-xl bg-foreground px-3 text-default dark:border dark:border-black sm:h-14">
-          <GooglePlayIcon className="w-5 sm:w-7" />
-          <div>
-            <div className="text-[.5rem] sm:text-xs">GET IT ON</div>
-            <div className="-mt-1 font-sans text-sm font-semibold sm:text-xl">
-              Google Play
-            </div>
-          </div>
-        </Button> */}
-
         {appleLink && (
           <Button
             as={Link}
