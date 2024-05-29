@@ -54,7 +54,7 @@ export default function ImageModalComponent({
           src={defaultSelected}
           // fill
           alt=""
-          className="size-auto max-h-[80svh] rounded-lg"
+          className="size-auto max-h-[75svh] rounded-lg object-cover"
           width="0"
           height="0"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

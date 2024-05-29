@@ -63,7 +63,6 @@ export const experienceData: { [key: string]: experienceDataProps } = {
           "Develop and enhance bespoke Content Management System (CMS) with features for posting, ordering management and SEO",
         ],
         teamsize: "3",
-        imageGallery: ["/aladin.png"],
       },
       {
         name: "Payment System",
@@ -80,7 +79,7 @@ export const experienceData: { [key: string]: experienceDataProps } = {
           "Developed a companion e-wallet for convenient fund management and seamless transactions within the platform.",
         ],
         teamsize: "3",
-        imageGallery: ["/s-wallet.png", "/aladin.png"],
+        imageGallery: ["/s-wallet.png"],
       },
       {
         name: "Chatify - a real-time chat application",
@@ -88,7 +87,7 @@ export const experienceData: { [key: string]: experienceDataProps } = {
           "Built a real-time chat application enabling user interaction with WebSocket technology.",
         ],
         teamsize: "3",
-        imageGallery: ["/s-wallet.png"],
+        imageGallery: ["/chatify-app.png"],
       },
       {
         name: "Trading Core",
@@ -96,7 +95,16 @@ export const experienceData: { [key: string]: experienceDataProps } = {
           "Designed and developed a stock trading system, allowing users to place orders on the company's system with real-time data from the Vietnamese stock market.",
         ],
         teamsize: "2",
-        imageGallery: ["/aladin.png"],
+        imageGallery: ["/trading.png"],
+      },
+    ],
+    otherRoles: [
+      {
+        title: "Intergrate CI/CD",
+        role: "DevOps",
+        description: [
+          "Streamlined product delivery by implementing a CI/CD pipeline using Maven, GitLab, Jenkins, and Sonarqube, optimizing DevOps workflow and reducing time to market.",
+        ],
       },
     ],
   },
@@ -111,6 +119,7 @@ export type experienceDataProps = {
   googlePlay: string;
   appStore: string;
   project: experienceProjectProps[];
+  otherRoles?: otherRolesProps[];
 };
 
 type experienceProjectProps = {
@@ -118,4 +127,10 @@ type experienceProjectProps = {
   responsibility: string[];
   teamsize: string | number;
   imageGallery?: string[];
+};
+
+type otherRolesProps = {
+  title: string;
+  role: string;
+  description: string[];
 };
