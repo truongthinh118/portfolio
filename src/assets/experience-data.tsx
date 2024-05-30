@@ -4,6 +4,8 @@ import ViCKIcon from "@/components/icon/VickIcon";
 export const experienceData: { [key: string]: experienceDataProps } = {
   aladin: {
     fullname: "Aladin Finance",
+    description:
+      "A platform connecting the community of professional consultants.",
     web: "https://aladin.finance/",
     role: "Backend Developer",
     duration: "Nov 2021 - Oct 2022",
@@ -49,6 +51,8 @@ export const experienceData: { [key: string]: experienceDataProps } = {
   },
   vick: {
     fullname: "ViCK",
+    description:
+      "VICK stands as a pioneer among Vietnam’s stock market enterprises, offering exclusive Expert Consulting/Investment Advisory services tailored for individual investors.",
     web: "https://vick.vn/",
     role: "Software Engineer",
     duration: "Oct 2022 - Present",
@@ -112,6 +116,7 @@ export const experienceData: { [key: string]: experienceDataProps } = {
 
 export type experienceDataProps = {
   fullname: string;
+  description: string;
   web: string;
   role: string;
   logo: JSX.Element;

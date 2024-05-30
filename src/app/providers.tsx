@@ -11,7 +11,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
     <NextUIProvider
       id="app-container"
       navigate={router.push}
-      className="hidden"
+      className="relative hidden"
     >
       <NextThemesProvider enableSystem={false} attribute="class">
         {children}

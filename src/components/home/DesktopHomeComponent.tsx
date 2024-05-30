@@ -13,7 +13,8 @@ export default function DesktopHomePage() {
     <>
       <main
         ref={ref}
-        className="relative hidden grid-cols-7 grid-rows-5 gap-2.5 bg-default p-2.5 lg:grid"
+        className="relative hidden grid-cols-7 grid-rows-5 gap-2.5 overflow-hidden bg-default p-2.5 lg:grid	"
+        // style={{ scrollbarWidth: "none" }}
       >
         <div
           className={`col-span-2 row-span-5 ${isInView ? "" : "-translate-x-full opacity-0"} transition-all duration-500	`}

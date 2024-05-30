@@ -6,6 +6,21 @@ import React from "react";
 import ExperienceIntoduction from "@/components/project/ExperienceIntroComponent";
 import { ArrowLeftIcon } from "@/components/icon/ArrowLeftIcon";
 import { ArrowRightIcon } from "@/components/icon/ArrowRightIcon";
+import { redirect } from "next/navigation";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { name: string };
+}): Promise<Metadata> {
+  const data = experienceData[params.name];
+
+  if (data === undefined) redirect("/experience");
+
+  return {
+    title: `${data.fullname} Experience`,
+  };
+}
 
 export default function ExperiencePage({
   params,
