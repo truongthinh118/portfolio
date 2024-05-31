@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./firefly.css";
+
 html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
@@ -69,33 +71,6 @@ main {
 .project-inner .project:not(:first-child) {
   margin-top: 1rem;
 }
-/* 
-.project:has(.project-gallery):nth-of-type(even) > .project-gallery {
-  float: right;
-}
-.project:has(.project-gallery):nth-of-type(odd) > .project-gallery {
-  float: left;
-}
-
-.project:has(.project-gallery):nth-of-type(1) > .project-gallery {
-  float: unset;
-} */
-/* 
-.project-inner .project-gallery:nth-of-type(2) {
-  background-color: pink;
-}
-.project-inner .project-gallery:nth-of-type(1) {
-  background-color: greenyellow;
-} */
-
-/* 
-.project-inner > .project:nth-child(odd):has(.project-gallery) {
-  background-color: greenyellow;
-}
-
-.project-inner > .project:nth-child(even):has(.project-gallery) {
-  background-color: red;
-} */
 
 .project h2 {
   font-size: clamp(1.563rem, 1.439vw + 1.266rem, 2.813rem);

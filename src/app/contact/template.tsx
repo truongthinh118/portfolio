@@ -1,6 +1,6 @@
 "use client";
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export default function ContactTemplate({
   children,
@@ -11,9 +11,14 @@ export default function ContactTemplate({
   const isInView = useInView(ref, { once: true });
   const [isVisible, setIsVisible] = useState(true);
 
+  const [direction, setDirection] = useState(true);
+  useEffect(() => {
+    setDirection(window.innerHeight > innerWidth);
+  }, []);
+
   const variants = {
     inView: {
-      clipPath: "inset(0 0 0 100%)",
+      clipPath: `${direction ? "inset(100% 0 0 0)" : "inset(0 0 0 100%)"}`,
       transition: { duration: 0.5, ease: "easeInOut" },
     },
     notInView: {
@@ -24,25 +29,27 @@ export default function ContactTemplate({
   return (
     <>
       <AnimatePresence>
-        {isVisible && (
-          <motion.main
-            ref={ref}
-            initial={false}
-            style={{
-              position: "absolute",
-              width: "100%",
-              height: "100%",
-              background: "hsl(var(--nextui-background))",
-              opacity: 1,
-              zIndex: 1000,
-            }}
-            variants={variants}
-            animate={isInView ? "inView" : "notInView"}
-            onAnimationComplete={() => setIsVisible(false)}
-          />
-        )}
+        <React.Fragment key={"contact"}>
+          {isVisible && (
+            <motion.main
+              ref={ref}
+              initial={false}
+              style={{
+                position: "absolute",
+                width: "100%",
+                height: "100%",
+                background: "hsl(var(--nextui-background))",
+                opacity: 1,
+                zIndex: 1000,
+              }}
+              variants={variants}
+              animate={isInView ? "inView" : "notInView"}
+              onAnimationComplete={() => setIsVisible(false)}
+            />
+          )}
+          {children}
+        </React.Fragment>
       </AnimatePresence>
-      {children}
     </>
   );
 }

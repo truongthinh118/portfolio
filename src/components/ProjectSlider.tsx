@@ -1,6 +1,6 @@
 "use client";
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { useRef, useState } from "react";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import Link from "next/link";
 import AladinIcon from "./icon/AladinIcon";
 import ViCKIcon from "./icon/VickIcon";
@@ -8,6 +8,9 @@ import { font } from "@/assets/font";
 import Image from "next/image";
 
 const ProjectSlider = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   const [positionIndexes, setPositionIndexes] = useState([0, 1, 2]);
 
   const handleNext = () => {
@@ -63,14 +66,17 @@ const ProjectSlider = () => {
     right: { x: "100%", y: "-50%", scale: 0.7, zIndex: 0 },
   };
   return (
-    <div className="relative flex size-full flex-col items-center justify-center ">
+    <div
+      className="relative flex size-full flex-col items-center justify-center"
+      ref={ref}
+    >
       <AnimatePresence initial={false}>
         {exps.map((exp, index) => (
           <motion.div
             key={index}
             className="flex aspect-[4/5] h-[60%] min-h-[60%] max-w-[35%] cursor-pointer overflow-hidden rounded-md bg-background"
             initial="center"
-            animate={positions[positionIndexes[index]]}
+            animate={isInView ? positions[positionIndexes[index]] : "center"}
             variants={imageVariants}
             transition={{ duration: 0.5 }}
             style={{ position: "absolute" }}
