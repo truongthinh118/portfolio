@@ -1,5 +1,5 @@
 "use client";
-import { AnimatePresence, motion, useInView } from "framer-motion";
+import { AnimatePresence, delay, motion, useInView } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 export default function ContactTemplate({
@@ -19,7 +19,7 @@ export default function ContactTemplate({
   const variants = {
     inView: {
       clipPath: `${direction ? "inset(100% 0 0 0)" : "inset(0 0 0 100%)"}`,
-      transition: { duration: 0.5, ease: "easeInOut" },
+      transition: { duration: 0.5, ease: "easeInOut", delay: 0.01 },
     },
     notInView: {
       clipPath: "inset(0 0 0 0)",

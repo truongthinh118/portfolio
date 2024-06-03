@@ -18,12 +18,14 @@ interface ImageModalComponentProps extends ButtonProps {
   defaultSelected: string;
   isFloat: boolean;
   floatPosition?: string;
+  imageClass?: string;
 }
 
 export default function ImageModalComponent({
   gallery,
   defaultSelected,
   className,
+  imageClass,
   isFloat,
   floatPosition,
   ...props
@@ -54,7 +56,10 @@ export default function ImageModalComponent({
           src={defaultSelected}
           // fill
           alt=""
-          className="size-auto max-h-[75svh] rounded-lg object-cover"
+          className={twMerge(
+            "size-auto max-h-[75svh] rounded-lg object-cover",
+            imageClass,
+          )}
           width="0"
           height="0"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

@@ -53,7 +53,7 @@ const ProjectSlider = () => {
         <Image src={"/logo.svg"} alt="" fill className="p-2 bg-blend-darken" />
       ),
       background: "bg-content1-foreground",
-      href: "/experience/hdcapital",
+      href: "/experience/personal-projects",
       borderClass: "from-[#ECE8E5] via-[#92755F] via-30% to-[#ECE8E5]",
     },
   ];

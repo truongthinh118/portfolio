@@ -47,6 +47,10 @@ const config: Config = {
             content3: {
               foreground: "#b97361",
             },
+            content4: {
+              DEFAULT: "#E7DED8",
+              foreground: "#92755F",
+            },
           },
         },
         dark: {

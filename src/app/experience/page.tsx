@@ -14,7 +14,7 @@ export default function ExperiencePage() {
         className={`${font.poppins.className} grid grid-rows-11 bg-default`}
       >
         <div className="row-span-2 flex lg:row-span-3">
-          <h1 className="m-auto py-12 text-[clamp(2.813rem,3.208vw+2.151rem,6rem)] font-semibold leading-none">
+          <h1 className="page-title m-auto py-12 font-semibold leading-none">
             MY EXPERIENCE
           </h1>
         </div>

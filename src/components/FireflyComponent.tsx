@@ -11,5 +11,11 @@ export default function FireFly() {
   const { theme } = useTheme();
   const isSSR = useIsSSR();
 
-  return <>{(theme === "dark" || isSSR) && <>{fireflies}</>}</>;
+  return (
+    <>
+      {(theme === "dark" || isSSR) && (
+        <div className="fire-fly-inner">{fireflies}</div>
+      )}
+    </>
+  );
 }
