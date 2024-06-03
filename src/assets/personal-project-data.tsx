@@ -34,7 +34,7 @@ export const projects: ProjectProps[] = [
       "Develop official website for HD Capital",
       "Design data structure and database for the website.",
     ],
-    time: "05.2024",
+    time: "12.23 - 03.24",
     technologies: [
       { name: "Java", icon: <JavaFillIcon className="" /> },
       { name: "Vanilla JS", icon: <JSIcon className="h-full fill-current" /> },

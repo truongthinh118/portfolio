@@ -55,8 +55,8 @@ export default function PersonalProjectPage() {
                           </span>
                           {Array.isArray(item.description) ? (
                             <ul className="list-inside list-disc font-light">
-                              {item.description.map((des) => (
-                                <li>{des}</li>
+                              {item.description.map((des, index) => (
+                                <li key={index}>{des}</li>
                               ))}
                             </ul>
                           ) : (
@@ -68,7 +68,10 @@ export default function PersonalProjectPage() {
                         {item.technologies && (
                           <div className="flex gap-8 px-6">
                             {item.technologies.map((tech) => (
-                              <figure className="flex flex-col items-center justify-center gap-1">
+                              <figure
+                                key={tech.name}
+                                className="flex flex-col items-center justify-center gap-1"
+                              >
                                 <span className="relative flex size-12 items-center justify-center">
                                   {tech.icon}
                                 </span>
