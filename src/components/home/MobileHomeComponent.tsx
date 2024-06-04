@@ -34,7 +34,7 @@ export default function HomeMobilePage() {
                     <p className="text-sm">Software Developer</p>
                     <Divider />
                   </article>
-                  <ContactMethodComponent icon="z-10 h-6 text-background" />
+                  <ContactMethodComponent icon="z-10 h-6 text-background dark:text-default-foreground" />
                 </div>
               </div>
             </div>

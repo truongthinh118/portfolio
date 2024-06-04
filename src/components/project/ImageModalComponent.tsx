@@ -10,12 +10,12 @@ import {
   Tabs,
   useDisclosure,
 } from "@nextui-org/react";
-import React from "react";
+import React, { Key } from "react";
 import { twMerge } from "tailwind-merge";
 
 interface ImageModalComponentProps extends ButtonProps {
   gallery: string[];
-  defaultSelected: string;
+  defaultSelected: number;
   isFloat: boolean;
   floatPosition?: string;
   imageClass?: string;
@@ -32,9 +32,7 @@ export default function ImageModalComponent({
 }: ImageModalComponentProps) {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
-  const [selected, setSelected] = React.useState<string | number>(
-    defaultSelected,
-  );
+  const [selected, setSelected] = React.useState<number>(defaultSelected);
 
   return (
     <>
@@ -53,7 +51,7 @@ export default function ImageModalComponent({
         {...props}
       >
         <Image
-          src={defaultSelected}
+          src={gallery[defaultSelected]}
           // fill
           alt=""
           className={twMerge(
@@ -91,11 +89,13 @@ export default function ImageModalComponent({
                   wrapper: "w-full",
                 }}
                 selectedKey={selected}
-                onSelectionChange={setSelected}
+                onSelectionChange={(e: Key) => {
+                  setSelected(e as number);
+                }}
               >
-                {gallery.map((item) => (
+                {gallery.map((item, index) => (
                   <Tab
-                    key={item}
+                    key={index}
                     title={
                       <Image
                         src={item}
@@ -117,6 +117,48 @@ export default function ImageModalComponent({
                   </Tab>
                 ))}
               </Tabs>
+
+              {/* <div className="fixed left-0 top-0">{selected}</div> */}
+              {/* {gallery.length > 1 && (
+                <>
+                  {selected > 0 && (
+                    <Button
+                      className="fixed left-4 top-1/2 -translate-y-1/2 bg-transparent"
+                      radius="full"
+                      size="lg"
+                      isIconOnly
+                      onClick={() => setSelected((pre) => pre - 1)}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 512"
+                        fill="currentColor"
+                        className="h-12"
+                      >
+                        <path d="M9.4 278.6c-12.5-12.5-12.5-32.8 0-45.3l128-128c9.2-9.2 22.9-11.9 34.9-6.9s19.8 16.6 19.8 29.6l0 256c0 12.9-7.8 24.6-19.8 29.6s-25.7 2.2-34.9-6.9l-128-128z" />
+                      </svg>
+                    </Button>
+                  )}
+                  {selected < gallery.length - 1 && (
+                    <Button
+                      className="fixed right-4 top-1/2 -translate-y-1/2 bg-transparent"
+                      radius="full"
+                      size="lg"
+                      isIconOnly
+                      onClick={() => setSelected((pre) => pre + 1)}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 256 512"
+                        fill="currentColor"
+                        className="h-12"
+                      >
+                        <path d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z" />
+                      </svg>
+                    </Button>
+                  )}
+                </>
+              )} */}
             </>
           )}
         </ModalContent>

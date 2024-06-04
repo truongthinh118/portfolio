@@ -1,14 +1,12 @@
 import JSIcon from "@/components/icon/JSIcon";
 import JavaFillIcon from "@/components/icon/JavaFillIcon";
-import JavaIcon from "@/components/icon/JavaIcon";
 import { NextJSIcon } from "@/components/icon/NextJSIcon";
 import { TailwindCSSIcon } from "@/components/icon/TailwindcssIcon";
-import Image from "next/image";
 
 export const projects: ProjectProps[] = [
   {
     name: "My Portfolio",
-    logo: "",
+    logo: "/hdcap-logo.jpg",
     thumbnail: ["/thumbnail.png"],
     intro: "~ My portfolio site ~",
     description:
@@ -21,11 +19,30 @@ export const projects: ProjectProps[] = [
     href: "/",
   },
   {
+    name: "HDCapital phase 2",
+    logo: "/hdcap-logo.png",
+    // thumbnail: [
+    //   "/hdcap-thumbnail.png",
+    //   "/hdcap-vision.png",
+    //   "/hdcap-product.png",
+    // ],
+    intro:
+      "“Vietnam’s leading open fund investment platform, helping people invest and save more effectively”",
+    description: ["Improve SEO for HDCapital website"],
+    time: "12.23 - 02.24",
+    technologies: [
+      { name: "Java", icon: <JavaFillIcon className="" /> },
+      { name: "Vanilla JS", icon: <JSIcon className="h-full fill-current" /> },
+    ],
+    href: "https://hdcap.vn/",
+  },
+  {
     name: "HDCapital",
     logo: "",
     thumbnail: [
       "/hdcap-thumbnail.png",
       "/hdcap-vision.png",
+      "/hdcap-chart.png",
       "/hdcap-product.png",
     ],
     intro:
@@ -34,7 +51,7 @@ export const projects: ProjectProps[] = [
       "Develop official website for HD Capital",
       "Design data structure and database for the website.",
     ],
-    time: "12.23 - 03.24",
+    time: "02.22 - 10.22",
     technologies: [
       { name: "Java", icon: <JavaFillIcon className="" /> },
       { name: "Vanilla JS", icon: <JSIcon className="h-full fill-current" /> },
@@ -43,10 +60,10 @@ export const projects: ProjectProps[] = [
   },
 ];
 
-type ProjectProps = {
+export type ProjectProps = {
   name: string;
   logo: string;
-  thumbnail: string[];
+  thumbnail?: string[];
   intro: string;
   description: string | string[];
   technologies?: TechnologyProps[];

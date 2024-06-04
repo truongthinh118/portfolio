@@ -59,7 +59,7 @@ export default function ExperiencePage({
                       {index > 0 && !!item.imageGallery && (
                         <ImageModalComponent
                           gallery={item.imageGallery}
-                          defaultSelected={item.imageGallery[0]}
+                          defaultSelected={0}
                           isFloat={index > 0}
                           floatPosition={galleryPosition ? "left" : "right"}
                         />
@@ -98,7 +98,7 @@ export default function ExperiencePage({
                       {index === 0 && !!item.imageGallery && (
                         <ImageModalComponent
                           gallery={item.imageGallery}
-                          defaultSelected={item.imageGallery[0]}
+                          defaultSelected={0}
                           isFloat={false}
                         />
                       )}
