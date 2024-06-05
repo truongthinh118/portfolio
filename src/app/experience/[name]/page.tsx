@@ -42,7 +42,7 @@ export default function ExperiencePage({
             </Link>
           </legend>
           <article className="px-4 py-8 text-justify sm:py-8 lg:px-12">
-            <section className="relative z-50 mx-auto md:ml-4 md:mr-4 lg:float-right lg:ml-24">
+            <section className="relative z-20 mx-auto md:ml-4 md:mr-4 lg:float-right lg:ml-24">
               <ExperienceIntoduction data={data} />
             </section>
 
