@@ -127,14 +127,14 @@ export type experienceDataProps = {
   otherRoles?: otherRolesProps[];
 };
 
-type experienceProjectProps = {
+export type experienceProjectProps = {
   name: string;
   responsibility: string[];
   teamsize: string | number;
   imageGallery?: string[];
 };
 
-type otherRolesProps = {
+export type otherRolesProps = {
   title: string;
   role: string;
   description: string[];

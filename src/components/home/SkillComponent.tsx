@@ -1,11 +1,11 @@
 "use client";
 import { Accordion, AccordionItem } from "@nextui-org/react";
-import JavaIcon from "./icon/JavaIcon";
-import LinuxIcon from "./icon/LinuxIcon";
-import { PostgreSQLIcon } from "./icon/PostgresqlIcon";
-import { JenkinsIcon } from "./icon/JenkinsIcon";
-import { USLangIcon } from "./icon/USLangIcon";
-import { CNLangIcon } from "./icon/CNLangIcon";
+import JavaIcon from "../icon/JavaIcon";
+import LinuxIcon from "../icon/LinuxIcon";
+import { PostgreSQLIcon } from "../icon/PostgresqlIcon";
+import { JenkinsIcon } from "../icon/JenkinsIcon";
+import { USLangIcon } from "../icon/USLangIcon";
+import { CNLangIcon } from "../icon/CNLangIcon";
 
 const progamming = [
   { name: "Java", icon: <JavaIcon className="h-6 fill-current" /> },

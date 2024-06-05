@@ -5,6 +5,7 @@ import { Button } from "@nextui-org/react";
 import Link from "next/link";
 import DownloadAppComponent from "../DownloadAppComponent";
 import React from "react";
+import Reveal from "../motion/RevealComponent";
 
 export default function ExperienceIntoduction({
   data,
@@ -19,21 +20,21 @@ export default function ExperienceIntoduction({
     className: "h-full",
   });
   return (
-    <>
+    <Reveal width="100%">
       <div className="flex flex-row-reverse items-center justify-between gap-2 pb-4 lg:flex-col lg:gap-1">
         <div className="flex w-full max-lg:justify-center">
           <table className="table-auto">
             <tbody className="text-sm font-light xs:text-lg  2xl:text-2xl">
               <tr>
-                <td className="flex items-center gap-2">
-                  <UserIcon className="h-5 fill-current text-current sm:h-10 sm:p-2" />
+                <td className="flex items-center justify-start gap-2">
+                  <UserIcon className="aspect-square h-5 fill-current text-current sm:h-10 sm:p-2" />
                   <span className="">Role: </span>
                 </td>
                 <td className="w-max text-left">{data.role}</td>
               </tr>
               <tr>
-                <td className="flex items-center gap-2">
-                  <CalendarIcon className="h-5 fill-current text-current sm:h-10 sm:p-2" />
+                <td className="flex items-center justify-start gap-2">
+                  <CalendarIcon className="aspect-square h-5 fill-current text-current sm:h-10 sm:p-2" />
                   <span className="">Duration: </span>
                 </td>
                 <td className="text-left">{data.duration}</td>
@@ -70,6 +71,6 @@ export default function ExperienceIntoduction({
           {sideLogo}
         </Button>
       </DownloadAppComponent>
-    </>
+    </Reveal>
   );
 }

@@ -1,7 +1,7 @@
-import ContactMethodComponent from "./contact/ContactMethodComponent";
-import SkillsComponent from "./SkillComponent";
+import ContactMethodComponent from "../contact/ContactMethodComponent";
 import { Divider } from "@nextui-org/react";
-import AvatarComponent from "./home/AvatarComponent";
+import AvatarComponent from "./AvatarComponent";
+import SkillsComponent from "./SkillComponent";
 
 export default function ProfileComponent() {
   return (

@@ -1,5 +1,10 @@
 "use client";
-import { AnimatePresence, delay, motion, useInView } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useAnimation,
+  useInView,
+} from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 export default function ContactTemplate({
@@ -16,12 +21,19 @@ export default function ContactTemplate({
     setDirection(window.innerHeight > innerWidth);
   }, []);
 
+  const controls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      controls.start("onscreen");
+    }
+  }, [isInView]);
+
   const variants = {
-    inView: {
+    onscreen: {
       clipPath: `${direction ? "inset(100% 0 0 0)" : "inset(0 0 0 100%)"}`,
       transition: { duration: 0.5, ease: "easeInOut", delay: 0.01 },
     },
-    notInView: {
+    offscreen: {
       clipPath: "inset(0 0 0 0)",
     },
   };
@@ -43,7 +55,7 @@ export default function ContactTemplate({
                 zIndex: 1000,
               }}
               variants={variants}
-              animate={isInView ? "inView" : "notInView"}
+              animate={controls}
               onAnimationComplete={() => setIsVisible(false)}
             />
           )}

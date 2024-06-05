@@ -19,7 +19,8 @@ export default function PersonalProjectCard({
 
   return (
     <fieldset
-      className="relative mx-auto h-full w-11/12 rounded-md border border-content1-foreground px-4 pb-12 pt-4 shadow-lg"
+      ref={ref}
+      className="relative mx-auto h-full w-11/12 rounded-md border border-content1-foreground px-4 pb-12 pt-4 shadow-lg will-change-transform"
       style={{
         opacity: `${isInView ? "1" : "0"}`,
         transform: `${isInView ? "rotateY(0deg)" : "rotateY(90deg)"}`,
@@ -34,10 +35,7 @@ export default function PersonalProjectCard({
         {item.name}
       </legend>
       <figure className="flex h-full w-full flex-row p-4 pl-7">
-        <div
-          ref={ref}
-          className="flex h-full w-2/5 items-center justify-center"
-        >
+        <div className="flex h-full w-2/5 items-center justify-center">
           {item.thumbnail ? (
             <ImageModalComponent
               gallery={item.thumbnail}
@@ -73,6 +71,7 @@ export default function PersonalProjectCard({
               <span className="font-light">{item.description}</span>
             )}
           </div>
+
           {item.technologies && (
             <div className="flex gap-8 px-6">
               {item.technologies.map((tech) => (
@@ -80,7 +79,7 @@ export default function PersonalProjectCard({
                   key={tech.name}
                   className="flex flex-col items-center justify-center gap-1"
                 >
-                  <span className="relative flex size-12 items-center justify-center">
+                  <span className="relative flex size-12 justify-center">
                     {tech.icon}
                   </span>
                   <figcaption className="font-bold">{tech.name}</figcaption>

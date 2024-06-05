@@ -1,6 +1,6 @@
 import { font } from "@/assets/font";
+import ProjectSlider from "@/components/project/ProjectSlider";
 import { Metadata } from "next";
-import ProjectSlider from "@/components/ProjectSlider";
 
 export const metadata: Metadata = {
   title: "Truong Thinh Experience",

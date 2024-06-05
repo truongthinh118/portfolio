@@ -2,10 +2,10 @@
 import { useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import Link from "next/link";
-import AladinIcon from "./icon/AladinIcon";
-import ViCKIcon from "./icon/VickIcon";
 import { font } from "@/assets/font";
 import Image from "next/image";
+import AladinIcon from "../icon/AladinIcon";
+import ViCKIcon from "../icon/VickIcon";
 
 const ProjectSlider = () => {
   const ref = useRef(null);

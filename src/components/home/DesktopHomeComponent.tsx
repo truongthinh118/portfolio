@@ -1,6 +1,6 @@
 "use client";
 import { useRef } from "react";
-import ProfileComponent from "../ProfileComponent";
+import ProfileComponent from "./ProfileComponent";
 import IntroductionComponent from "./IntroductionComponent";
 import StatComponent from "./StatComponent";
 import { useInView } from "framer-motion";
