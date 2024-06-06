@@ -1,4 +1,4 @@
-import { otherRolesProps } from "@/assets/experience-data";
+import { otherRolesProps } from "@/data/experience-data";
 import React from "react";
 import BounceUp from "../motion/BounceUpComponent";
 

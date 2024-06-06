@@ -1,4 +1,4 @@
-import { experienceDataProps } from "@/assets/experience-data";
+import { experienceDataProps } from "@/data/experience-data";
 import { UserIcon } from "../icon/UserIcon";
 import { CalendarIcon } from "../icon/CalendarIcon";
 import { Button } from "@nextui-org/react";

@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { experienceData } from "@/assets/experience-data";
+import { experienceData } from "@/data/experience-data";
 import React from "react";
 import ExperienceIntoduction from "@/components/project/ExperienceIntroComponent";
 import { redirect } from "next/navigation";

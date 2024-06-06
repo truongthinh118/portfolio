@@ -22,7 +22,7 @@ export default function Reveal({
     if (isInView) {
       controls.start("visible");
     }
-  }, [isInView]);
+  }, [isInView, controls]);
 
   return (
     <div

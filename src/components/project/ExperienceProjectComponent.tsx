@@ -1,4 +1,4 @@
-import { experienceProjectProps } from "@/assets/experience-data";
+import { experienceProjectProps } from "@/data/experience-data";
 import ImageModalComponent from "./ImageModalComponent";
 import React from "react";
 import { ArrowLeftIcon } from "../icon/ArrowLeftIcon";

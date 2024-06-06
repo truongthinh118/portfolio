@@ -26,7 +26,7 @@ export default function ContactTemplate({
     if (isInView) {
       controls.start("onscreen");
     }
-  }, [isInView]);
+  }, [isInView, controls]);
 
   const variants = {
     onscreen: {

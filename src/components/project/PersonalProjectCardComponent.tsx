@@ -3,9 +3,9 @@ import Image from "next/image";
 import ImageModalComponent from "./ImageModalComponent";
 import Link from "next/link";
 import { LinkIcon } from "@nextui-org/react";
-import { ProjectProps } from "@/assets/personal-project-data";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import { ProjectProps } from "@/data/personal-project-data";
 
 export default function PersonalProjectCard({
   item,

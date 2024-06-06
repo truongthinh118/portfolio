@@ -1,5 +1,5 @@
-import { projects } from "@/assets/personal-project-data";
 import PersonalProjectCard from "@/components/project/PersonalProjectCardComponent";
+import { projects } from "@/data/personal-project-data";
 import { Metadata } from "next";
 import React from "react";
 
