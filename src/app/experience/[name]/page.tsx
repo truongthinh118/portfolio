@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { experienceData } from "@/data/experience-data";
 import React from "react";
 import ExperienceIntoduction from "@/components/project/ExperienceIntroComponent";
 import { redirect } from "next/navigation";
 import ExperienceProject from "@/components/project/ExperienceProjectComponent";
 import ExperienceSideRole from "@/components/project/ExperienceSideRoleComponent";
+import { experienceData } from "@/lib/experience-data";
 
 export async function generateMetadata({
   params,

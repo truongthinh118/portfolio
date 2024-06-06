@@ -2,6 +2,7 @@ import JSIcon from "@/components/icon/JSIcon";
 import JavaFillIcon from "@/components/icon/JavaFillIcon";
 import { NextJSIcon } from "@/components/icon/NextJSIcon";
 import { TailwindCSSIcon } from "@/components/icon/TailwindcssIcon";
+import React from "react";
 
 export const projects: ProjectProps[] = [
   {
@@ -13,26 +14,27 @@ export const projects: ProjectProps[] = [
       "This site not only describes more details about me, but also as a landing page showing my specialized skills ...",
     time: "05.2024",
     technologies: [
-      { name: "NextJS", icon: <NextJSIcon /> },
-      { name: "TailwindCSS", icon: <TailwindCSSIcon className="h-full" /> },
+      { name: "NextJS", icon: React.createElement(NextJSIcon) },
+      {
+        name: "TailwindCSS",
+        icon: React.createElement(TailwindCSSIcon, { className: "h-full" }),
+      },
     ],
     href: "/",
   },
   {
     name: "HDCapital phase 2",
     logo: "/hdcap-logo.png",
-    // thumbnail: [
-    //   "/hdcap-thumbnail.png",
-    //   "/hdcap-vision.png",
-    //   "/hdcap-product.png",
-    // ],
     intro:
       "“Vietnam’s leading open fund investment platform, helping people invest and save more effectively”",
     description: ["Improve SEO for HDCapital website"],
     time: "12.23 - 02.24",
     technologies: [
-      { name: "Java", icon: <JavaFillIcon className="" /> },
-      { name: "VanillaJS", icon: <JSIcon className="h-full fill-current" /> },
+      { name: "Java", icon: React.createElement(JavaFillIcon) },
+      {
+        name: "VanillaJS",
+        icon: React.createElement(JSIcon, { className: "h-full fill-current" }),
+      },
     ],
     href: "https://hdcap.vn/",
   },
@@ -53,8 +55,11 @@ export const projects: ProjectProps[] = [
     ],
     time: "02.22 - 10.22",
     technologies: [
-      { name: "Java", icon: <JavaFillIcon className="" /> },
-      { name: "VanillaJS", icon: <JSIcon className="h-full fill-current" /> },
+      { name: "Java", icon: React.createElement(JavaFillIcon) },
+      {
+        name: "VanillaJS",
+        icon: React.createElement(JSIcon, { className: "h-full fill-current" }),
+      },
     ],
     href: "https://hdcap.vn/",
   },

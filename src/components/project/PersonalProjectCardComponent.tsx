@@ -5,7 +5,7 @@ import Link from "next/link";
 import { LinkIcon } from "@nextui-org/react";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-import { ProjectProps } from "@/data/personal-project-data";
+import { ProjectProps } from "@/lib/personal-project-data";
 
 export default function PersonalProjectCard({
   item,
@@ -25,7 +25,7 @@ export default function PersonalProjectCard({
         opacity: `${isInView ? "1" : "0"}`,
         transform: `${isInView ? "rotateY(0deg)" : "rotateY(90deg)"}`,
         transformOrigin: "left",
-        transitionDuration: "1s",
+        transitionDuration: "0.8s",
         transitionTimingFunction: "ease-in-out",
         transitionDelay: `${index * 0.15}s`,
         transitionProperty: "opacity, transform",

@@ -1,5 +1,5 @@
 import PersonalProjectCard from "@/components/project/PersonalProjectCardComponent";
-import { projects } from "@/data/personal-project-data";
+import { projects } from "@/lib/personal-project-data";
 import { Metadata } from "next";
 import React from "react";
 

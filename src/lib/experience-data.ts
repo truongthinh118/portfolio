@@ -1,5 +1,6 @@
 import AladinIcon from "@/components/icon/AladinIcon";
 import ViCKIcon from "@/components/icon/VickIcon";
+import React from "react";
 
 export const experienceData: { [key: string]: experienceDataProps } = {
   aladin: {
@@ -9,7 +10,7 @@ export const experienceData: { [key: string]: experienceDataProps } = {
     web: "https://aladin.finance/",
     role: "Backend Developer",
     duration: "Nov 2021 - Oct 2022",
-    logo: <AladinIcon />,
+    logo: React.createElement(AladinIcon),
     googlePlay:
       "https://play.google.com/store/apps/details?id=com.aladinmobile.aladin",
     appStore: "https://apps.apple.com/us/app/aladin-finance/id1474783146",
@@ -56,7 +57,7 @@ export const experienceData: { [key: string]: experienceDataProps } = {
     web: "https://vick.vn/",
     role: "Software Engineer",
     duration: "Oct 2022 - Present",
-    logo: <ViCKIcon />,
+    logo: React.createElement(ViCKIcon),
     googlePlay:
       "https://play.google.com/store/apps/details?id=com.stalk.stalkmobile&hl=en_US",
     appStore: "https://apps.apple.com/vn/app/vick/id6443514902?l=vi",
