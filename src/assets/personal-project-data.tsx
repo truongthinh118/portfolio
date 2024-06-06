@@ -32,7 +32,7 @@ export const projects: ProjectProps[] = [
     time: "12.23 - 02.24",
     technologies: [
       { name: "Java", icon: <JavaFillIcon className="" /> },
-      { name: "Vanilla JS", icon: <JSIcon className="h-full fill-current" /> },
+      { name: "VanillaJS", icon: <JSIcon className="h-full fill-current" /> },
     ],
     href: "https://hdcap.vn/",
   },
@@ -54,7 +54,7 @@ export const projects: ProjectProps[] = [
     time: "02.22 - 10.22",
     technologies: [
       { name: "Java", icon: <JavaFillIcon className="" /> },
-      { name: "Vanilla JS", icon: <JSIcon className="h-full fill-current" /> },
+      { name: "VanillaJS", icon: <JSIcon className="h-full fill-current" /> },
     ],
     href: "https://hdcap.vn/",
   },
