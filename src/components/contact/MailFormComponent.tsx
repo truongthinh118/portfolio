@@ -2,12 +2,11 @@
 import { useState, useMemo } from "react";
 import { Input, Textarea } from "@nextui-org/react";
 import sendMail from "@/actions/SendMail";
-import { UserIcon } from "../icon/UserIcon";
-import EnvelopeIcon from "../icon/EnvelopeIcon";
 import ContactMethodComponent from "./ContactMethodComponent";
 import Link from "next/link";
 import SubmitButtonComponent from "./SubmitButtonComponent";
 import { toast } from "sonner";
+import { EnvelopeIcon, UserIcon } from "../icon/Icon";
 
 export default function MailForm() {
   const [name, setName] = useState("");

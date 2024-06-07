@@ -1,8 +1,8 @@
 import { Button, Link } from "@nextui-org/react";
 import { twMerge } from "tailwind-merge";
 import { GithubIcon, LinkedinIcon } from "../icon/LogoIcon";
-import EnvelopeIcon from "../icon/EnvelopeIcon";
 import React from "react";
+import { EnvelopeIcon } from "../icon/Icon";
 
 export default function ContactMethodComponent({
   base,

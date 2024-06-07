@@ -1,7 +1,5 @@
 "use client";
 import { Accordion, AccordionItem } from "@nextui-org/react";
-import { USLangIcon } from "../icon/USLangIcon";
-import { CNLangIcon } from "../icon/CNLangIcon";
 import {
   JavaIcon,
   JenkinsIcon,
@@ -9,6 +7,7 @@ import {
   PostgreSQLIcon,
 } from "../icon/LogoIcon";
 import React from "react";
+import { CNLangIcon, USLangIcon } from "../icon/LanguageIcon";
 
 const progamming = [
   {

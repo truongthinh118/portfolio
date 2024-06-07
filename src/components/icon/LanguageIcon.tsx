@@ -1,6 +1,30 @@
 import React from "react";
 import type { SVGProps } from "react";
 
+export function CNLangIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" {...props}>
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeWidth={4}
+      >
+        <rect
+          width={36}
+          height={36}
+          x={6}
+          y={6}
+          strokeLinejoin="round"
+          rx={3}
+        ></rect>
+        <path strokeLinejoin="round" d="M14 18h20v10H14z"></path>
+        <path d="M24 14v21"></path>
+      </g>
+    </svg>
+  );
+}
+
 export function EnNavIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -29,6 +53,63 @@ export function EnNavIcon(props: SVGProps<SVGSVGElement>) {
           transform="scale(3.9385)"
         />
       </g>
+    </svg>
+  );
+}
+
+export function USLangIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+      <path
+        fill="currentColor"
+        d="M6 17q-.825 0-1.412-.587T4 15V7h2v8h3V7h2v8q0 .825-.587 1.413T9 17zm9 0q-.825 0-1.412-.587T13 15v-1h2v1h3v-2h-3q-.825 0-1.412-.587T13 11V9q0-.825.588-1.412T15 7h3q.825 0 1.413.588T20 9v1h-2V9h-3v2h3q.825 0 1.413.588T20 13v2q0 .825-.587 1.413T18 17z"
+      ></path>
+    </svg>
+  );
+}
+
+export function ZhNavcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 512 512"
+      {...props}
+    >
+      <defs>
+        <path id="cn-a" fill="#ff0" d="M1-.3-.7.8 0-1 .6.8-1-.3z" />
+      </defs>
+      <path fill="#ee1c25" d="M0 0h512v512H0z" />
+      <use
+        xlinkHref="#cn-a"
+        width="30"
+        height="20"
+        transform="translate(128 128)scale(76.8)"
+      />
+      <use
+        xlinkHref="#cn-a"
+        width="30"
+        height="20"
+        transform="rotate(-121 142.6 -47)scale(25.5827)"
+      />
+      <use
+        xlinkHref="#cn-a"
+        width="30"
+        height="20"
+        transform="rotate(-98.1 198 -82)scale(25.6)"
+      />
+      <use
+        xlinkHref="#cn-a"
+        width="30"
+        height="20"
+        transform="rotate(-74 272.4 -114)scale(25.6137)"
+      />
+      <use
+        xlinkHref="#cn-a"
+        width="30"
+        height="20"
+        transform="matrix(16 -19.968 19.968 16 256 230.4)"
+      />
     </svg>
   );
 }

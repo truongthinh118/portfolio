@@ -1,11 +1,10 @@
-import { UserIcon } from "../icon/UserIcon";
-import { CalendarIcon } from "../icon/CalendarIcon";
 import { Button } from "@nextui-org/react";
 import Link from "next/link";
 import DownloadAppComponent from "../DownloadAppComponent";
 import React from "react";
 import Reveal from "../motion/RevealComponent";
 import { experienceDataProps } from "@/lib/experience-data";
+import { CalendarIcon, UserIcon } from "../icon/Icon";
 
 export default function ExperienceIntoduction({
   data,

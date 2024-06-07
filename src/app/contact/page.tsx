@@ -2,7 +2,7 @@ import { Button, Link } from "@nextui-org/react";
 import type { Metadata } from "next";
 import MailForm from "@/components/contact/MailFormComponent";
 import ContactMethodComponent from "@/components/contact/ContactMethodComponent";
-import { FileIcon } from "@/components/icon/FileIcon";
+import { FileIcon } from "@/components/icon/Icon";
 
 export const metadata: Metadata = {
   title: "Truong Thinh Contact",

@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { NextUIProvider } from "@nextui-org/system";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
-import FireFly from "@/components/FireflyComponent";
+import FireFly from "@/components/motion/FireflyComponent";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const router = useRouter();

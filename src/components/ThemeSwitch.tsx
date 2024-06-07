@@ -1,9 +1,8 @@
 "use client";
 import { Button } from "@nextui-org/react";
-import { SunIcon } from "./icon/SunIcon";
-import { MoonIcon } from "./icon/MoonIcon";
 import { useTheme } from "next-themes";
 import { useIsSSR } from "@react-aria/ssr";
+import { MoonIcon, SunIcon } from "./icon/Icon";
 
 export default function ThemeSwitch() {
   const { theme, setTheme } = useTheme();

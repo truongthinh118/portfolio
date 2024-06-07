@@ -1,6 +1,6 @@
 import { Card } from "@nextui-org/react";
 import Image from "next/image";
-import { BullEyesIcon } from "../icon/BullEyesIcon";
+import { BullEyesIcon } from "../icon/Icon";
 
 export default function IntroductionComponent() {
   return (

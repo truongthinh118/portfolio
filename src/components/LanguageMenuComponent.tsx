@@ -8,9 +8,9 @@ import {
   DropdownItem,
   Button,
 } from "@nextui-org/react";
-import { EnNavIcon } from "./icon/EnNavIcon";
-import { ZhNavcon } from "./icon/ZhNavIcon";
 import { usePathname } from "next/navigation";
+import React from "react";
+import { EnNavIcon, ZhNavcon } from "./icon/LanguageIcon";
 
 interface LanguageMenuProps {
   lang?: string;
@@ -22,8 +22,8 @@ export default function LanguageMenu(props: LanguageMenuProps) {
     "size-5 rounded-full dark:border-[0.5px] dark:border-content1-foreground";
 
   const lang: { [key: string]: JSX.Element } = {
-    en: <EnNavIcon className={iconClasses} />,
-    zh: <ZhNavcon className={iconClasses} />,
+    en: React.createElement(EnNavIcon, { className: iconClasses }),
+    zh: React.createElement(ZhNavcon, { className: iconClasses }),
   };
 
   const pathname = usePathname();
