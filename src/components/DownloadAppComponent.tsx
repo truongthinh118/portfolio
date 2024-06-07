@@ -1,8 +1,7 @@
 import { Button } from "@nextui-org/react";
-import AppStoreIcon from "./icon/AppStoreIcon";
-import GooglePlayIcon from "./icon/GooglePlayIcon";
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
+import { AppStoreIcon, GooglePlayIcon } from "./icon/LogoIcon";
 
 interface DownloadAppComponentProps extends React.ComponentPropsWithRef<"div"> {
   googleLink: string;

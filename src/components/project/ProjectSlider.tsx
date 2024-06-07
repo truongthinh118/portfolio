@@ -4,8 +4,8 @@ import { AnimatePresence, motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { font } from "@/assets/font";
 import Image from "next/image";
-import AladinIcon from "../icon/AladinIcon";
-import ViCKIcon from "../icon/VickIcon";
+import React from "react";
+import { AladinIcon, ViCKIcon } from "../icon/LogoIcon";
 
 const ProjectSlider = () => {
   const ref = useRef(null);
@@ -35,14 +35,18 @@ const ProjectSlider = () => {
   const exps = [
     {
       name: "Aladin",
-      logo: <AladinIcon className="size-full p-2 bg-blend-darken" />,
+      logo: React.createElement(AladinIcon, {
+        className: "size-full p-2 bg-blend-darken",
+      }),
       background: "bg-[#002366]",
       href: "/experience/aladin",
       borderClass: "from-[#ee9775] via-[#E9622D] via-30%	to-[#002C82]",
     },
     {
       name: "ViCK",
-      logo: <ViCKIcon className="size-full p-2 bg-blend-darken" />,
+      logo: React.createElement(ViCKIcon, {
+        className: "size-full p-2 bg-blend-darken",
+      }),
       background: "bg-[#EE8F00]",
       href: "/experience/vick",
       borderClass: "from-[#002C82] via-[#455798] via-30% to-[#EE8F00]",

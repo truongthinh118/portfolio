@@ -1,7 +1,9 @@
-import JSIcon from "@/components/icon/JSIcon";
-import JavaFillIcon from "@/components/icon/JavaFillIcon";
-import { NextJSIcon } from "@/components/icon/NextJSIcon";
-import { TailwindCSSIcon } from "@/components/icon/TailwindcssIcon";
+import {
+  JSIcon,
+  JavaFillIcon,
+  NextJSIcon,
+  TailwindCSSIcon,
+} from "@/components/icon/LogoIcon";
 import React from "react";
 
 export const projects: ProjectProps[] = [

@@ -15,6 +15,7 @@ import ThemeSwitch from "./ThemeSwitch";
 import { usePathname } from "next/navigation";
 import { useRef, useState } from "react";
 import { useInView } from "framer-motion";
+import Logo from "./icon/Logo";
 
 export default function Navigator() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -68,6 +69,7 @@ export default function Navigator() {
             className="transition-all ease-in-out hover:scale-125"
             priority
           />
+          {/* <Logo className="h-full" /> */}
         </Link>
       </NavbarBrand>
 

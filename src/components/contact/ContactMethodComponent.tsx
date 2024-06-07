@@ -1,8 +1,8 @@
 import { Button, Link } from "@nextui-org/react";
-import EnvelopeIcon from "../icon/EnvelopeIcon";
-import GithubIcon from "../icon/GithubIcon";
-import LinkedinIcon from "../icon/LinkedinIcon";
 import { twMerge } from "tailwind-merge";
+import { GithubIcon, LinkedinIcon } from "../icon/LogoIcon";
+import EnvelopeIcon from "../icon/EnvelopeIcon";
+import React from "react";
 
 export default function ContactMethodComponent({
   base,
@@ -19,17 +19,17 @@ export default function ContactMethodComponent({
   const contactMethods = [
     {
       name: "linkedin",
-      icon: <LinkedinIcon className={iconClass} />,
+      icon: React.createElement(LinkedinIcon, { className: iconClass }),
       href: "https://www.linkedin.com/in/thinhdtt/",
     },
     {
       name: "github",
-      icon: <GithubIcon className={iconClass} />,
+      icon: React.createElement(GithubIcon, { className: iconClass }),
       href: "https://github.com/truongthinh118",
     },
     {
       name: "email",
-      icon: <EnvelopeIcon className={iconClass} />,
+      icon: React.createElement(EnvelopeIcon, { className: iconClass }),
       href: "mailto:truongthinh118001@gmail.com",
     },
   ];

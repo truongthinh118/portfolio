@@ -1,5 +1,4 @@
-import AladinIcon from "@/components/icon/AladinIcon";
-import ViCKIcon from "@/components/icon/VickIcon";
+import { AladinIcon, ViCKIcon } from "@/components/icon/LogoIcon";
 import React from "react";
 
 export const experienceData: { [key: string]: experienceDataProps } = {

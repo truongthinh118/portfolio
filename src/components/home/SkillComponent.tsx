@@ -1,22 +1,45 @@
 "use client";
 import { Accordion, AccordionItem } from "@nextui-org/react";
-import JavaIcon from "../icon/JavaIcon";
-import LinuxIcon from "../icon/LinuxIcon";
-import { PostgreSQLIcon } from "../icon/PostgresqlIcon";
-import { JenkinsIcon } from "../icon/JenkinsIcon";
 import { USLangIcon } from "../icon/USLangIcon";
 import { CNLangIcon } from "../icon/CNLangIcon";
+import {
+  JavaIcon,
+  JenkinsIcon,
+  LinuxIcon,
+  PostgreSQLIcon,
+} from "../icon/LogoIcon";
+import React from "react";
 
 const progamming = [
-  { name: "Java", icon: <JavaIcon className="h-6 fill-current" /> },
-  { name: "Linux", icon: <LinuxIcon className="h-6 fill-current" /> },
-  { name: "PostgreSQL", icon: <PostgreSQLIcon className="h-6 fill-current" /> },
-  { name: "Jenkins", icon: <JenkinsIcon className="h-6 fill-current" /> },
+  {
+    name: "Java",
+    icon: React.createElement(JavaIcon, { className: "h-6 fill-current" }),
+  },
+  {
+    name: "Linux",
+    icon: React.createElement(LinuxIcon, { className: "h-6 fill-current" }),
+  },
+  {
+    name: "PostgreSQL",
+    icon: React.createElement(PostgreSQLIcon, {
+      className: "h-6 fill-current",
+    }),
+  },
+  {
+    name: "Jenkins",
+    icon: React.createElement(JenkinsIcon, { className: "h-6 fill-current" }),
+  },
 ];
 
 const languages = [
-  { name: "English", icon: <USLangIcon className="h-8" /> },
-  { name: "Chinese", icon: <CNLangIcon className="h-8" /> },
+  {
+    name: "English",
+    icon: React.createElement(USLangIcon, { className: "h-8" }),
+  },
+  {
+    name: "Chinese",
+    icon: React.createElement(CNLangIcon, { className: "h-8" }),
+  },
 ];
 
 export default function SkillsComponent() {
