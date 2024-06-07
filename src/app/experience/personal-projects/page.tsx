@@ -1,4 +1,3 @@
-import MobilePersonalProject from "@/components/project/MobilePersonalProject";
 import PersonalProjectCard from "@/components/project/PersonalProjectCardComponent";
 import { projects } from "@/lib/personal-project-data";
 import { Metadata } from "next";

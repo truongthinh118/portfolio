@@ -1,4 +1,5 @@
 import {
+  FramerIcon,
   JSIcon,
   JavaFillIcon,
   NextJSIcon,
@@ -22,6 +23,7 @@ export const projects: ProjectProps[] = [
         name: "TailwindCSS",
         icon: React.createElement(TailwindCSSIcon, { className: "h-full" }),
       },
+      { name: "Framer Motion", icon: React.createElement(FramerIcon) },
     ],
     href: "/",
   },

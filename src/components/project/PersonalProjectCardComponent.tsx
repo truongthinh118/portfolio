@@ -20,7 +20,7 @@ export default function PersonalProjectCard({
   return (
     <fieldset
       ref={ref}
-      className=" relative mx-auto h-full w-11/12 rounded-md border border-content1-foreground pb-2 shadow-lg will-change-transform max-sm:flex max-sm:flex-col sm:px-4 sm:pb-12 sm:pt-4"
+      className=" relative mx-auto h-full w-11/12 rounded-md border border-content1-foreground pb-4 shadow-lg will-change-transform max-sm:flex max-sm:flex-col sm:px-4 sm:pb-12 sm:pt-4"
       style={{
         opacity: `${isInView ? "1" : "0"}`,
         transform: `${isInView ? "rotateY(0deg)" : "rotateY(90deg)"}`,
