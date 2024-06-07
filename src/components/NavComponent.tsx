@@ -80,13 +80,13 @@ export default function Navigator() {
         <NavbarItem>
           <ThemeSwitch />
         </NavbarItem>
-        <NavbarItem>
+        <NavbarItem className="hidden">
           <LanguageMenu lang="en" />
         </NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="sm:hidden" justify="end">
-        <NavbarItem>
+        <NavbarItem className="hidden">
           <LanguageMenu lang="en" />
         </NavbarItem>
 

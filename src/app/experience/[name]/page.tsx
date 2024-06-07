@@ -35,7 +35,7 @@ export default function ExperiencePage({
   return (
     <>
       <main className="container mx-auto my-16 scroll-smooth">
-        <fieldset className="project-wrapper rounded-[5px] border border-foreground">
+        <fieldset className="project-wrapper rounded-[5px] sm:border sm:border-foreground">
           <legend className="project-title ml-4 px-1 sm:ml-16">
             <Link href={data.web} target="_blank">
               {data.fullname}

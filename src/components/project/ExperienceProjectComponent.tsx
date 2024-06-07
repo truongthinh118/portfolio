@@ -1,9 +1,9 @@
-import { experienceProjectProps } from "@/data/experience-data";
 import ImageModalComponent from "./ImageModalComponent";
 import React from "react";
 import { ArrowLeftIcon } from "../icon/ArrowLeftIcon";
 import { ArrowRightIcon } from "../icon/ArrowRightIcon";
 import BounceUp from "../motion/BounceUpComponent";
+import { experienceProjectProps } from "@/lib/experience-data";
 
 interface Props {
   item: experienceProjectProps;
