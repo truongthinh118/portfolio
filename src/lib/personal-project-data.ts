@@ -17,7 +17,7 @@ export const projects: ProjectProps[] = [
     mobileThumbnail: "/background.jpeg",
     intro: "~ My portfolio site ~",
     description:
-      "This site not only describes more details about me, but also as a landing page showing my specialized skills ...",
+      "This site not only describes more details about me, but also as a landing page proving my specialized skills.",
     time: "05.2024",
     technologies: [
       { name: "NextJS", icon: React.createElement(NextJSIcon) },
