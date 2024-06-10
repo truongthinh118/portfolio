@@ -18,8 +18,9 @@ export default function IntroductionComponent() {
           <span>
             Short term:
             <p>
-              Aspire to work as a Software Developer over the next four years in
-              a prestigious company.
+              Aspire to work as a Software Developer in a prestigious company,
+              be always proactive to gain specialized knowledge for making a
+              contribution to the company development.
             </p>
           </span>
           <span>
