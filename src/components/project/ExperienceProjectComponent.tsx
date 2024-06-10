@@ -47,6 +47,17 @@ export default function ExperienceProject({
             ))}
           </p>
           Team size: {item.teamsize}
+          {item.techStack && (
+            <>
+              <br />
+              Tech Stack:{" "}
+              {Object.entries(item.techStack).map(([key, value]) => (
+                <p key={key} className="ml-4">
+                  <strong>{key}: </strong> {value.join(", ")}
+                </p>
+              ))}
+            </>
+          )}
         </span>
 
         {!!item.imageGallery && !isLast && (

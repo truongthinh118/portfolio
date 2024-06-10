@@ -21,6 +21,20 @@ export const experienceData: { [key: string]: experienceDataProps } = {
         ],
         teamsize: "2",
         imageGallery: ["/aladin.png"],
+        techStack: {
+          "Programming Languages": ["Java"],
+          "Project Management": ["GitScrum"],
+          "Source Code Management": ["GitLab"],
+          "Build Tools": ["Maven"],
+          "Operating System": ["Ubuntu"],
+          "Development Tools": [
+            "Visual Studio Code",
+            "Eclipse",
+            "IntelliJ IDEA",
+            "DBeaver",
+          ],
+          Database: ["PostgreSQL"],
+        },
       },
       {
         name: "Automatically synchronize data",
@@ -28,6 +42,20 @@ export const experienceData: { [key: string]: experienceDataProps } = {
           "Develop an application to automatically synchronize data from CRM applications to improve customer satisfaction.",
         ],
         teamsize: "2",
+        techStack: {
+          "Programming Languages": ["Java"],
+          "Project Management": ["GitScrum"],
+          "Source Code Management": ["GitLab"],
+          "Build Tools": ["Maven"],
+          "Operating System": ["Ubuntu"],
+          "Development Tools": [
+            "Visual Studio Code",
+            "Eclipse",
+            "IntelliJ IDEA",
+            "DBeaver",
+          ],
+          Database: ["PostgreSQL"],
+        },
       },
       {
         name: "Trading System Platform",
@@ -36,7 +64,22 @@ export const experienceData: { [key: string]: experienceDataProps } = {
           "Create great experience to customer by simultaneously making orders on several securities accounts entrusted by clients from numerous securities companies.",
           "Calculate customer profit and loss, commissions and trading fee for investors.",
         ],
-        teamsize: "2",
+        teamsize: "6",
+        techStack: {
+          "Programming Languages": ["Java", "JavaScript"],
+          "Project Management": ["GitScrum"],
+          "Source Code Management": ["GitLab"],
+          "Build Tools": ["Maven"],
+          "Operating System": ["Ubuntu"],
+          "Development Tools": [
+            "Visual Studio Code",
+            "Eclipse",
+            "IntelliJ IDEA",
+            "Postman",
+            "DBeaver",
+          ],
+          Database: ["PostgreSQL"],
+        },
       },
       {
         name: "Trading BOT",
@@ -46,9 +89,18 @@ export const experienceData: { [key: string]: experienceDataProps } = {
           "Providing the trading strategies and trading signals for company and customers",
         ],
         teamsize: "2",
+        techStack: {
+          "Programming Languages": ["Java"],
+          "Source Code Management": ["GitLab"],
+          "Build Tools": ["Maven"],
+          "Operating System": ["Ubuntu"],
+          "Development Tools": ["Eclipse", "IntelliJ IDEA", "DBeaver"],
+          Database: ["PostgreSQL"],
+        },
       },
     ],
   },
+
   vick: {
     fullname: "ViCK",
     description:
@@ -67,6 +119,22 @@ export const experienceData: { [key: string]: experienceDataProps } = {
           "Develop and enhance bespoke Content Management System (CMS) with features for posting, ordering management and SEO",
         ],
         teamsize: "3",
+        techStack: {
+          "Programming Languages": ["Java", "JavaScript"],
+          "Project Management": ["OpenProject"],
+          "CI/CD Tools": ["Jenkins", "SonarQube"],
+          "Source Code Management": ["GitLab"],
+          "Build Tools": ["Maven"],
+          "Operating System": ["Ubuntu"],
+          "Development Tools": [
+            "Visual Studio Code",
+            "Eclipse",
+            "IntelliJ IDEA",
+            "Postman",
+            "DBeaver",
+          ],
+          Database: ["PostgreSQL"],
+        },
       },
       {
         name: "Payment System",
@@ -75,31 +143,98 @@ export const experienceData: { [key: string]: experienceDataProps } = {
           "Architect and implement a multi-platform payment system.",
           "Integrate popular gateways like MOMO and VNPAY, which leverages Kafka and Apache Ignite for high responsiveness and accuracy",
         ],
-        teamsize: "1",
+        teamsize: "3",
+        techStack: {
+          "Programming Languages": ["Java"],
+          "Project Management": ["OpenProject"],
+          "CI/CD Tools": ["Jenkins", "SonarQube"],
+          "Source Code Management": ["GitLab"],
+          "Build Tools": ["Maven"],
+          "Operating System": ["Ubuntu"],
+          "Development Tools": [
+            "Visual Studio Code",
+            "Eclipse",
+            "IntelliJ IDEA",
+            "Postman",
+            "DBeaver",
+          ],
+          Database: ["PostgreSQL"],
+        },
       },
       {
         name: "S-Wallet - a exclusive E-wallet",
         responsibility: [
           "Developed a companion e-wallet for convenient fund management and seamless transactions within the platform.",
         ],
-        teamsize: "3",
+        teamsize: "5",
         imageGallery: ["/s-wallet.png"],
+        techStack: {
+          "Programming Languages": ["Java", "JavaScript", "Dart"],
+          Framework: ["BulmaCSS", "Flutter"],
+          "Project Management": ["OpenProject"],
+          "CI/CD Tools": ["Jenkins", "SonarQube"],
+          "Source Code Management": ["GitLab"],
+          "Build Tools": ["Maven"],
+          "Operating System": ["Ubuntu"],
+          "Development Tools": [
+            "Visual Studio Code",
+            "Eclipse",
+            "IntelliJ IDEA",
+            "Postman",
+            "DBeaver",
+          ],
+          Database: ["PostgreSQL"],
+        },
       },
       {
         name: "Chatify - a real-time chat application",
         responsibility: [
           "Built a real-time chat application enabling user interaction with WebSocket technology.",
         ],
-        teamsize: "3",
+        teamsize: "5",
         imageGallery: ["/chatify-app.png"],
+        techStack: {
+          "Programming Languages": ["Java", "JavaScript", "Dart"],
+          Framework: ["BulmaCSS", "Flutter"],
+          "Project Management": ["OpenProject"],
+          "CI/CD Tools": ["Jenkins", "SonarQube"],
+          "Source Code Management": ["GitLab"],
+          "Build Tools": ["Maven"],
+          "Operating System": ["Ubuntu"],
+          "Development Tools": [
+            "Visual Studio Code",
+            "Eclipse",
+            "IntelliJ IDEA",
+            "Postman",
+            "DBeaver",
+          ],
+          Database: ["PostgreSQL"],
+        },
       },
       {
         name: "Trading Core",
         responsibility: [
           "Designed and developed a stock trading system, allowing users to place orders on the company's system with real-time data from the Vietnamese stock market.",
         ],
-        teamsize: "2",
+        teamsize: "5",
         imageGallery: ["/trading.png"],
+        techStack: {
+          "Programming Languages": ["Java", "JavaScript", "Dart"],
+          Framework: ["BulmaCSS", "Flutter"],
+          "Project Management": ["OpenProject"],
+          "CI/CD Tools": ["Jenkins", "SonarQube"],
+          "Source Code Management": ["GitLab"],
+          "Build Tools": ["Maven"],
+          "Operating System": ["Ubuntu"],
+          "Development Tools": [
+            "Visual Studio Code",
+            "Eclipse",
+            "IntelliJ IDEA",
+            "Postman",
+            "DBeaver",
+          ],
+          Database: ["PostgreSQL"],
+        },
       },
     ],
     otherRoles: [
@@ -132,6 +267,7 @@ export type experienceProjectProps = {
   responsibility: string[];
   teamsize: string | number;
   imageGallery?: string[];
+  techStack?: Record<string, string[]>;
 };
 
 export type otherRolesProps = {

@@ -2,7 +2,9 @@ import {
   FramerIcon,
   JSIcon,
   JavaFillIcon,
+  MavenIcon,
   NextJSIcon,
+  PostgreSQLFillIcon,
   TailwindCSSIcon,
 } from "@/components/icon/LogoIcon";
 import React from "react";
@@ -41,6 +43,8 @@ export const projects: ProjectProps[] = [
         name: "VanillaJS",
         icon: React.createElement(JSIcon, { className: "h-full fill-current" }),
       },
+      { name: "PostgreSQL", icon: React.createElement(PostgreSQLFillIcon) },
+      // { name: "Maven", icon: React.createElement(MavenIcon) },
     ],
     href: "https://hdcap.vn/",
   },
@@ -67,6 +71,8 @@ export const projects: ProjectProps[] = [
         name: "VanillaJS",
         icon: React.createElement(JSIcon, { className: "h-full fill-current" }),
       },
+      { name: "PostgreSQL", icon: React.createElement(PostgreSQLFillIcon) },
+      // { name: "Maven", icon: React.createElement(MavenIcon) },
     ],
     href: "https://hdcap.vn/",
   },
